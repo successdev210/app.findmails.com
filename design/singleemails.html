@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="outer__header">
+				<a href="#">
+					<img src="img/logo.svg" alt="logo">
+				</a>
+				<div class="header__menu">
+					<ul>
+						<li>
+							<a href="singleemails.html" class='active' >Search</a>
+						</li>
+						<li>
+							<a href="findersearch.html">Finder</a>
+						</li>
+						<li>
+							<a href="bulkverif2.html">Verification</a>
+						</li>
+						<li class="menu__dropdown--list">
+							<a href="#">Deliverability</a>
+							<div class="menu__dropdown" style="display:none;">
+								<div class="deliverability__wrapper">
+									<div class="head__deliverability">
+										<p>Deliverability tools</p>
+										<span>Test your emails before sending them.</span>
+									</div>
+									<ul>
+										<li>
+											<a href="deliverability2.html">
+ 											     <div class="media__image">
+ 											     	<img src="img/deliv1.svg" alt="deliv1">
+ 											     </div>
+ 											     <div class="desc">
+ 											     	<p>Inbox placement <span>New</span></p>
+ 											     	<span>Find email addresses from a list of websites or companies.</span>
+ 											     </div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+ 											     <div class="media__image">
+ 											     	<img src="img/deliv2.svg" alt="deliv1">
+ 											     </div>
+ 											     <span class="desc">
+ 											     	<p>Blacklist Monitoring</p>
+ 											     	<span>Find email addresses from a list of names and companies.</span>
+ 											     </span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="menu__dropdown--list">
+							<a href="bulktasks.html" >Bulk</a>
+							<div class="menu__dropdown" style="display:none;">
+								<div class="bulk">
+									
+									<ul>
+										<li>
+											<a href="domainsearch.html" >
+ 											     <div class="media__image">
+ 											     	<img src="img/deliv1.svg" alt="deliv1">
+ 											     </div>
+ 											     <div class="desc">
+ 											     	<p>Domain Search <span>New</span></p>
+ 											     	<span>Find email addresses from a list of websites or companies.</span>
+ 											     </div>
+											</a>
+										</li>
+										<li>
+											<a href="bulkfinder2.html">
+ 											     <div class="media__image">
+ 											     	<img src="img/deliv3.svg" alt="deliv1">
+ 											     </div>
+ 											     <span class="desc">
+ 											     	<p>Email Finder</p>
+ 											     	<span>Find email addresses from a list of names and companies.</span>
+ 											     </span>
+											</a>
+										</li>
+										<li>
+											<a href="bulkverif2.html">
+ 											     <div class="media__image shadow">
+ 											     	<img src="img/deliv4.svg" alt="deliv1">
+ 											     </div>
+ 											     <span class="desc">
+ 											     	<p>Email Verifier</p>
+ 											     	<span>Verify a list of email addresses.</span>
+ 											     </span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="leads.html">Leads</a>
+						</li>
+						<li>
+							<a href="campaign2.html">Campaign</a>
+						</li>
+					</ul>
+					<div class="header__controls">
+						<a href="#" class="outline-btn">Buy Credits</a>
+						<ul>
+							<li>
+								<a href="settings.html"><img src="img/settings.svg" alt="settings"></a>
+							</li>
+							<li>
+								<a href="#" class="notification__button"><img src="img/notification.svg" alt="notification"></a>
+								<div class="notification__dropdown">
+									<div class="head__dropdown">
+										<p>Notifications</p>
+										<a href="#">Mark as read</a>
+									</div>
+									<div class="notification__list">
+										<div class="elem__notif">
+											<span style="background-color:#1751D0;"></span>
+											<div class="notif__desc">
+												<p>My main project was edited</p>
+												<span>Jan 23, 2023 at 10:15am</span>
+											</div>
+										</div>
+										<div class="elem__notif">
+											<span style="background-color:#1751D0;"></span>
+											<div class="notif__desc">
+												<p>Invoice #1011 was paid</p>
+												<span>Jan 23, 2023 at 10:15am</span>
+											</div>
+										</div>
+										<div class="elem__notif">
+											<span style="background-color:#1751D0;"></span>
+											<div class="notif__desc">
+												<p>Feedback left on “ASC Redesign”</p>
+												<span>Jan 23, 2023 at 10:15am</span>
+											</div>
+										</div>
+									</div>
+									<div class="more__button">
+										<a href="#">View all notifications</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="profile__info">
+							<a href="#">
+								<!-- <img src="img/avatar.png" alt="avatar"> -->
+								<span class="placeholder"><img src="img/profile.svg" alt=""></span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="menu__button">
+					<a href="#">
+						<span></span>
+						<span></span>
+						<span></span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="overlay__popup" style="display:none;"></div>
+	<div class="main__container">
+		<div class="side__box history" style="display:none;">
+			<div class="head__history">
+				<p>History</p>
+				<span>Access all your verified emails.</span>
+				<a href="#"><img src="img/closemodal.svg" alt="closemodal"></a>
+			</div>
+			<div class="history__main">
+				<div class="upgrade">
+					<span><img src="img/lockgrey.svg" alt="lockgrey"></span>
+					<h6>Upgrade to premium <br> to unlock.</h6>
+					<a href="#" class="regular-btn">Upgrade</a>
+				</div>
+			</div>
+		</div>
+		<div class="box__verification">
+			<form action="" class="single__verification">
+				<div class="head__verification">
+					<div class="back__button">
+						<a href="#"><span><img src="img/backbutton.svg" alt="backbutton"></span> Single Verification</a>
+					</div>
+					<div class="controls__button">
+						<a href="#" class="outline-btn">Verify list</a>
+						<a href="#" class="outline-btn history__single"><span><img src="img/history.svg" alt="history"></span>History</a>
+					</div>
+				</div>
+				<div class="search__field">
+					<div class="group__input">
+						<input type="text" placeholder="Search for an email..." class="email__field">
+						<button type="submit"><span><img src="img/searchwhite.svg" alt="searchwhite"></span> Search</button>
+					</div>
+					<div class="error__message" style="display:none;">
+						<p class="error__label"><span><img src="img/error.svg" alt="error"></span> Please enter a valid email.</p>
+					</div>
+				</div>
+				<div class="searching" style="display:none;">
+					<p>Searching for ....</p>
+				</div>
+				<div class="email__result" data-email="test@gmail.com" style="display:none;">
+					<div class="head__result">
+						<div class="result__left">
+							<span><img src="img/success.svg" alt="success"></span>
+							<div class="result__title">
+								<p>Email verified</p>
+								<span>Your email is on good mood.</span>
+							</div>
+						</div>
+						<div class="result__right">
+							<div class="circle" data-size="44" data-thickness="3" data-color="#629B81" data-empty="#E4E4E7" data-value="0.92">
+								<span>92</span>
+							</div>
+						</div>
+					</div>
+					<div class="table__result">
+						<div class="elem__result">
+							<p><span><img src="img/success.svg" alt="success"></span> Email: 2000madani</p>
+						</div>
+						<div class="elem__result">
+							<p><span><img src="img/success.svg" alt="success"></span> Domain: gmail.com</p>
+						</div>
+						<div class="elem__result">
+							<p><span><img src="img/success.svg" alt="success"></span> Syntax error: no</p>
+						</div>
+						<div class="elem__result">
+							<p><span><img src="img/success.svg" alt="success"></span> Role: no</p>
+						</div>
+						<div class="elem__result">
+							<p><span><img src="img/success.svg" alt="success"></span> Spam-trap: no</p>
+						</div>
+						<div class="elem__result">
+							<p><span><img src="img/error.svg" alt="success"></span> Disposable: yes</p>
+						</div>
+						<div class="elem__result">
+							<p><span><img src="img/success.svg" alt="success"></span> Accept-all: no</p>
+						</div>
+						<div class="elem__result">
+							<p><span><img src="img/success.svg" alt="success"></span> Free Email: no</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="email__result" data-email="test1@gmail.com" style="display:none;">
+					<div class="head__result">
+						<div class="result__left">
+							<span><img src="img/error.svg" alt="success"></span>
+							<div class="result__title">
+								<p>Email invalid</p>
+								<span>2000madani@gmail.com</span>
+							</div>
+						</div>
+						<div class="result__right">
+							<div class="circle" data-size="44" data-thickness="3" data-color="#F04438" data-empty="#E4E4E7" data-value="0.23">
+								<span>23</span>
+							</div>
+						</div>
+					</div>
+					<div class="table__result">
+						<div class="elem__result">
+							<p><span><img src="img/success.svg" alt="success"></span> Email: another data here</p>
+						</div>
+						<div class="elem__result">
+							<p><span><img src="img/success.svg" alt="success"></span> Domain: gmail.com</p>
+						</div>
+						<div class="elem__result">
+							<p><span><img src="img/success.svg" alt="success"></span> Syntax error: no</p>
+						</div>
+						<div class="elem__result">
+							<p><span><img src="img/success.svg" alt="success"></span> Role: no</p>
+						</div>
+						<div class="elem__result">
+							<p><span><img src="img/success.svg" alt="success"></span> Spam-trap: no</p>
+						</div>
+						<div class="elem__result">
+							<p><span><img src="img/error.svg" alt="success"></span> Disposable: yes</p>
+						</div>
+						<div class="elem__result">
+							<p><span><img src="img/success.svg" alt="success"></span> Accept-all: no</p>
+						</div>
+						<div class="elem__result">
+							<p><span><img src="img/success.svg" alt="success"></span> Free Email: no</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="email__result" data-email="test2@gmail.com" style="display:none;">
+					<div class="head__result">
+						<div class="result__left">
+							<span><img src="img/error.svg" alt="success"></span>
+							<div class="result__title">
+								<p>Email risky</p>
+								<span>Your email is on good mood.</span>
+							</div>
+						</div>
+						<div class="result__right">
+							<div class="circle" data-size="44" data-thickness="3" data-color="#F79009" data-empty="#E4E4E7" data-value="0.58">
+								<span>58</span>
+							</div>
+						</div>
+					</div>
+					<div class="table__result">
+						<div class="elem__result">
+							<p><span><img src="img/success.svg" alt="success"></span> Email: another data here</p>
+						</div>
+						<div class="elem__result">
+							<p><span><img src="img/success.svg" alt="success"></span> Domain: gmail.com</p>
+						</div>
+						<div class="elem__result">
+							<p><span><img src="img/success.svg" alt="success"></span> Syntax error: no</p>
+						</div>
+						<div class="elem__result">
+							<p><span><img src="img/success.svg" alt="success"></span> Role: no</p>
+						</div>
+						<div class="elem__result">
+							<p><span><img src="img/success.svg" alt="success"></span> Spam-trap: no</p>
+						</div>
+						<div class="elem__result">
+							<p><span><img src="img/error.svg" alt="success"></span> Disposable: yes</p>
+						</div>
+						<div class="elem__result">
+							<p><span><img src="img/success.svg" alt="success"></span> Accept-all: no</p>
+						</div>
+						<div class="elem__result">
+							<p><span><img src="img/success.svg" alt="success"></span> Free Email: no</p>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		
+	</div>
+	<script
+  src="https://code.jquery.com/jquery-3.6.4.js"
+  integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+  crossorigin="anonymous"></script>
+  	<script src="js/circle-progress.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

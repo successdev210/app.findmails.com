@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body >
+	<div class="overlay"></div>
+	<div class="overlay__popup"></div>
+	<div class="float__tooltip--box" style="display:none;">
+		<p></p>
+	</div>
+	<header>
+		<div class="container">
+			<div class="outer__header">
+				<a href="#">
+					<img src="img/logo.svg" alt="logo">
+				</a>
+				<div class="header__menu">
+					<ul>
+						<li>
+							<a href="singleemails.html" >Search</a>
+						</li>
+						<li>
+							<a href="findersearch.html">Finder</a>
+						</li>
+						<li>
+							<a href="bulkverif2.html" class="active">Verification</a>
+						</li>
+						<li class="menu__dropdown--list">
+							<a href="#">Deliverability</a>
+							<div class="menu__dropdown" style="display:none;">
+								<div class="deliverability__wrapper">
+									<div class="head__deliverability">
+										<p>Deliverability tools</p>
+										<span>Test your emails before sending them.</span>
+									</div>
+									<ul>
+										<li>
+											<a href="deliverability2.html">
+ 											     <div class="media__image">
+ 											     	<img src="img/deliv1.svg" alt="deliv1">
+ 											     </div>
+ 											     <div class="desc">
+ 											     	<p>Inbox placement <span>New</span></p>
+ 											     	<span>Find email addresses from a list of websites or companies.</span>
+ 											     </div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+ 											     <div class="media__image">
+ 											     	<img src="img/deliv2.svg" alt="deliv1">
+ 											     </div>
+ 											     <span class="desc">
+ 											     	<p>Blacklist Monitoring</p>
+ 											     	<span>Find email addresses from a list of names and companies.</span>
+ 											     </span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="menu__dropdown--list">
+							<a href="bulktasks.html">Bulk</a>
+							<div class="menu__dropdown" style="display:none;">
+								<div class="bulk">
+									
+									<ul>
+										<li>
+											<a href="domainsearch.html">
+ 											     <div class="media__image">
+ 											     	<img src="img/deliv1.svg" alt="deliv1">
+ 											     </div>
+ 											     <div class="desc">
+ 											     	<p>Domain Search <span>New</span></p>
+ 											     	<span>Find email addresses from a list of websites or companies.</span>
+ 											     </div>
+											</a>
+										</li>
+										<li>
+											<a href="bulkfinder2.html">
+ 											     <div class="media__image">
+ 											     	<img src="img/deliv3.svg" alt="deliv1">
+ 											     </div>
+ 											     <span class="desc">
+ 											     	<p>Email Finder</p>
+ 											     	<span>Find email addresses from a list of names and companies.</span>
+ 											     </span>
+											</a>
+										</li>
+										<li>
+											<a href="bulkverif2.html">
+ 											     <div class="media__image shadow">
+ 											     	<img src="img/deliv4.svg" alt="deliv1">
+ 											     </div>
+ 											     <span class="desc">
+ 											     	<p>Email Verifier</p>
+ 											     	<span>Verify a list of email addresses.</span>
+ 											     </span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="leads.html">Leads</a>
+						</li>
+						<li>
+							<a href="campaign2.html">Campaign</a>
+						</li>
+					</ul>
+					<div class="header__controls">
+						<a href="#" class="outline-btn">Buy Credits</a>
+						<ul>
+							<li>
+								<a href="settings.html"><img src="img/settings.svg" alt="settings"></a>
+							</li>
+							<li>
+								<a href="#" class="notification__button"><img src="img/notification.svg" alt="notification"></a>
+								<div class="notification__dropdown">
+									<div class="head__dropdown">
+										<p>Notifications</p>
+										<a href="#">Mark as read</a>
+									</div>
+									<div class="notification__list">
+										<div class="elem__notif">
+											<span style="background-color:#1751D0;"></span>
+											<div class="notif__desc">
+												<p>My main project was edited</p>
+												<span>Jan 23, 2023 at 10:15am</span>
+											</div>
+										</div>
+										<div class="elem__notif">
+											<span style="background-color:#1751D0;"></span>
+											<div class="notif__desc">
+												<p>Invoice #1011 was paid</p>
+												<span>Jan 23, 2023 at 10:15am</span>
+											</div>
+										</div>
+										<div class="elem__notif">
+											<span style="background-color:#1751D0;"></span>
+											<div class="notif__desc">
+												<p>Feedback left on “ASC Redesign”</p>
+												<span>Jan 23, 2023 at 10:15am</span>
+											</div>
+										</div>
+									</div>
+									<div class="more__button">
+										<a href="#">View all notifications</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="profile__info">
+							<a href="#">
+								<!-- <img src="img/avatar.png" alt="avatar"> -->
+								<span class="placeholder"><img src="img/profile.svg" alt=""></span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="menu__button">
+					<a href="#">
+						<span></span>
+						<span></span>
+						<span></span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="main__container">
+		<div class="domain__search--container">
+			<form action="">
+				<div class="domain__search--box">
+					<div class="head__search--box">
+						<p>Bulk Verification</p>
+						<a href="#" class="regular-btn new__bulkverif--button"><span><img src="img/plus.svg" alt="plus"></span> New Bulk</a>
+					</div>
+					<div class="empty__domain">
+						<span><img src="img/noreports.svg" alt="norepors"></span>
+						<h6>No bulk task, yet.</h6>
+						<p>Find email addresses from multiple companies using the Bulk Domain Search.</p>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="float__box new__bulk--verification" style="display:none;">
+			<form action="">
+				<div class="new__bulk--verif--box">
+					<div class="head__verif">
+						<p>New Bulk Verification</p>
+						<a href="#"><img src="img/closemodal.svg" alt="closemodal"></a>
+					</div>
+					<div class="switcher__new--bulk">
+						<ul>
+							<li class="active"><a href="#" data-bulk=".upload__new">Local files</a></li>
+							<li><a href="#" data-bulk=".upload__enter">Copy & Past</a></li>
+							<li><a href="#" data-bulk=".upload__integration">Integrations</a></li>
+						</ul>
+					</div>
+					<div class="method__new">
+						<div class="upload__new" style="display:none;">
+							<div class="upl__box">
+								<div class="upload__top">
+									<div class="droppable__box--new">
+										<input type="file">
+										<span><img src="img/uploadicon.svg" alt="uploadicon"></span>
+										<p><a href="#">Click to upload</a> or drag and drop <br> <span>TXT or CSV file (max. 20mb)</span></p>
+									</div>
+									<div class="files__grid--new" style="display:none"></div>
+								</div>
+								<button type="submit" class="regular-btn disabled">Upload</button>
+							</div>
+						</div>
+						<div class="upload__integration" >
+							<div class="upl__box">
+								<div class="upload__integration--import" style="display:none;">
+									<div class="wrap__">
+										<div class="top__part">
+											<div class="back__button">
+												<a href="#"><span><img src="img/smallback.svg" alt="smallback"></span> Back</a>
+											</div>
+											<div class="connect__">
+												<span><img src="img/integration1.png" alt="integration"></span>
+												<p>Connect your mailchimp <br> <span>Get access to all your lists in seconds.</span></p>
+											</div>
+											<div class="my__list">
+												<p>My Lists</p>
+												<div class="list__wrapper">
+													<div class="elem__list">
+														<label class="checkbox__container">
+														  <input type="checkbox" >
+														  <span class="checkmark"></span>
+														</label>
+														<div class="desc__list">
+															<p>data_complaint.csv</p>
+															<span>10,482 emails</span>
+														</div>
+													</div>
+													<div class="elem__list">
+														<label class="checkbox__container">
+														  <input type="checkbox" >
+														  <span class="checkmark"></span>
+														</label>
+														<div class="desc__list">
+															<p>data_complaint.csv</p>
+															<span>10,482 emails</span>
+														</div>
+													</div>
+													<div class="elem__list">
+														<label class="checkbox__container">
+														  <input type="checkbox" >
+														  <span class="checkmark"></span>
+														</label>
+														<div class="desc__list">
+															<p>data_complaint.csv</p>
+															<span>10,482 emails</span>
+														</div>
+													</div>
+													<div class="elem__list">
+														<label class="checkbox__container">
+														  <input type="checkbox" >
+														  <span class="checkmark"></span>
+														</label>
+														<div class="desc__list">
+															<p>data_complaint.csv</p>
+															<span>10,482 emails</span>
+														</div>
+													</div>
+													<div class="elem__list">
+														<label class="checkbox__container">
+														  <input type="checkbox" >
+														  <span class="checkmark"></span>
+														</label>
+														<div class="desc__list">
+															<p>data_complaint.csv</p>
+															<span>10,482 emails</span>
+														</div>
+													</div>
+													<div class="elem__list">
+														<label class="checkbox__container">
+														  <input type="checkbox" >
+														  <span class="checkmark"></span>
+														</label>
+														<div class="desc__list">
+															<p>data_complaint.csv</p>
+															<span>10,482 emails</span>
+														</div>
+													</div>
+													<div class="elem__list">
+														<label class="checkbox__container">
+														  <input type="checkbox" >
+														  <span class="checkmark"></span>
+														</label>
+														<div class="desc__list">
+															<p>data_complaint.csv</p>
+															<span>10,482 emails</span>
+														</div>
+													</div>
+													<div class="elem__list">
+														<label class="checkbox__container">
+														  <input type="checkbox" >
+														  <span class="checkmark"></span>
+														</label>
+														<div class="desc__list">
+															<p>data_complaint.csv</p>
+															<span>10,482 emails</span>
+														</div>
+													</div>
+													<div class="elem__list">
+														<label class="checkbox__container">
+														  <input type="checkbox" >
+														  <span class="checkmark"></span>
+														</label>
+														<div class="desc__list">
+															<p>data_complaint.csv</p>
+															<span>10,482 emails</span>
+														</div>
+													</div>
+													<div class="elem__list">
+														<label class="checkbox__container">
+														  <input type="checkbox" >
+														  <span class="checkmark"></span>
+														</label>
+														<div class="desc__list">
+															<p>data_complaint.csv</p>
+															<span>10,482 emails</span>
+														</div>
+													</div>
+													<div class="elem__list">
+														<label class="checkbox__container">
+														  <input type="checkbox" >
+														  <span class="checkmark"></span>
+														</label>
+														<div class="desc__list">
+															<p>data_complaint.csv</p>
+															<span>10,482 emails</span>
+														</div>
+													</div>
+													<div class="elem__list">
+														<label class="checkbox__container">
+														  <input type="checkbox" >
+														  <span class="checkmark"></span>
+														</label>
+														<div class="desc__list">
+															<p>data_complaint.csv</p>
+															<span>10,482 emails</span>
+														</div>
+													</div>
+													<div class="elem__list">
+														<label class="checkbox__container">
+														  <input type="checkbox" >
+														  <span class="checkmark"></span>
+														</label>
+														<div class="desc__list">
+															<p>data_complaint.csv</p>
+															<span>10,482 emails</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="bottom__part">
+											<button type="submit" class="regular-btn">Import List</button>
+										</div>
+									</div>
+								</div>
+								<div class="upload__integration--inner" style="display:none;">
+									<div class="back__button">
+										<a href="#"><span><img src="img/smallback.svg" alt="smallback"></span> Back</a>
+									</div>
+									<div class="connect__">
+										<span><img src="img/integration1.png" alt="integration"></span>
+										<p>Connect your mailchimp <br> <span>Get access to all your lists in seconds.</span></p>
+									</div>
+									<div class="connect__form">
+										<div class="group__input">
+											<p>Enter API Key</p>
+											<input type="text" placeholder="XXXX-XXXX">
+											<span class="tooltip__float" data-tooltip="Some random text about something"><img src="img/infoicon.svg" alt="success"></span>
+										</div>
+										<div class="connect__button">
+											<a href="#" class="regular-btn">Connect</a>
+										</div>
+									</div>
+								</div>
+								<div class="upload__integration--list" style="display:none;">
+									<div class="elem__integration">
+										<div class="integration__name">
+											<span><img src="img/integration1.png" alt="integration"></span>
+											<p>Mailchimp</p>
+										</div>
+										<div class="integration__status">
+											<a href="#" class="connected">Connected</a>
+										</div>
+									</div>
+									<div class="elem__integration">
+										<div class="integration__name">
+											<span><img src="img/integration2.png" alt="integration"></span>
+											<p>Hubspot</p>
+										</div>
+										<div class="integration__status">
+											<a href="#" class="connect">Connected</a>
+										</div>
+									</div>
+
+									<div class="elem__integration">
+										<div class="integration__name">
+											<span><img src="img/integration3.png" alt="integration"></span>
+											<p>Sendgrid</p>
+										</div>
+										<div class="integration__status">
+											<a href="#" class="connect">Connected</a>
+										</div>
+									</div>
+
+									<div class="elem__integration">
+										<div class="integration__name">
+											<span><img src="img/integration4.png" alt="integration"></span>
+											<p>MailerLite</p>
+										</div>
+										<div class="integration__status">
+											<a href="#" class="connect">Connected</a>
+										</div>
+									</div>
+
+									<div class="elem__integration">
+										<div class="integration__name">
+											<span><img src="img/integration5.png" alt="integration"></span>
+											<p>Campaign Monitor</p>
+										</div>
+										<div class="integration__status">
+											<a href="#" class="connect">Connected</a>
+										</div>
+									</div>
+
+									<div class="elem__integration">
+										<div class="integration__name">
+											<span><img src="img/integration6.png" alt="integration"></span>
+											<p>Constant Contact</p>
+										</div>
+										<div class="integration__status">
+											<a href="#" class="connect">Connected</a>
+										</div>
+									</div>
+
+									<div class="elem__integration">
+										<div class="integration__name">
+											<span><img src="img/integration7.png" alt="integration"></span>
+											<p>Mailgun</p>
+										</div>
+										<div class="integration__status">
+											<a href="#" class="connect">Connected</a>
+										</div>
+									</div>
+
+									<div class="elem__integration">
+										<div class="integration__name">
+											<span><img src="img/integration8.png" alt="integration"></span>
+											<p>Active Campaign</p>
+										</div>
+										<div class="integration__status">
+											<a href="#" class="connect">Connected</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="upload__enter" style="display:none;">
+							<div class="upl__box">
+								<div class="upload__top">
+									<p><span>Enter the domain names</span> (One per line)</p>
+							<div class="inner__copy">
+							<textarea name="" id="" cols="30" rows="10">
+bounceless.io
+emaillistvalidation.com
+apple.com
+miscrosoft.com
+bounceless.io
+emaillistvalidation.com
+apple.com
+miscrosoft.com
+bounceless.io
+emaillistvalidation.com
+apple.com
+miscrosoft.com
+bounceless.io
+emaillistvalidation.com
+apple.com
+miscrosoft.com
+bounceless.io
+emaillistvalidation.com
+apple.com
+miscrosoft.com
+bounceless.io
+emaillistvalidation.com
+apple.com
+miscrosoft.com
+bounceless.io
+emaillistvalidation.com
+apple.com
+miscrosoft.com
+bounceless.io
+emaillistvalidation.com
+apple.com
+miscrosoft.com
+bounceless.io
+emaillistvalidation.com
+apple.com
+miscrosoft.com
+bounceless.io
+emaillistvalidation.com
+apple.com
+miscrosoft.com
+							</textarea>
+						</div>
+								</div>
+								<button type="submit" class="regular-btn disabled">Upload</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div class="modal__wrapper" style="display:none;">
+		<div class="inner__modal">
+			<div class="modal__box new__report">
+				<div class="loading" style="display:none;">
+					<div class="inner__loading">
+						<span><img src="img/loading.svg" alt="loading"></span>
+						<p>Just a moment <br> <span>Waiting the arrival of your email..</span></p>
+					</div>
+				</div>
+				<form action="">
+					<div class="head__report">
+						<p>New report</p>
+						<span>Add the following email seed as participants to your email</span>
+					</div>
+					<div class="tags__wrapper">
+						<a href="#" data-copy="some text bla bla bla bla">
+							<span><img src="img/copycircle.svg" alt="copycircle"></span>
+							<p>Click to copy</p>
+						</a>
+						<div class="elem__tag">
+							<p>alma.lawson@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>tanya.hill@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>g@email.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>dolores.chambers@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>tim@gmail.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>jennings@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>sara.cruz@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>tim.jennings@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>bro@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>dolores.chambers@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>tim@gmail.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>jennings@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>sara.cruz@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>tim.jennings@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>yesm@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>yesm@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>tim.jennings@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>yesm@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>yesm@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>tim.jennings@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>yesm@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>yesm@example.com</p>
+						</div>
+					</div>
+					<div class="controls__reports">
+						<div class="left__report">
+							<a href="#">Watch tutorial</a>
+						</div>
+						<div class="right__reports">
+							<a href="#" class="outline-btn cancel__modal">Cancel</a>
+							<button type="submit" class="regular-btn bigger">Check results</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script
+  src="https://code.jquery.com/jquery-3.6.4.js"
+  integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+  crossorigin="anonymous"></script>
+  	<script src="js/circle-progress.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

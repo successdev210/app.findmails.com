@@ -1,0 +1,1779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body >
+	<div class="float__tooltip--box" style="display:none;">
+		<p></p>
+	</div>
+	<div class="overlay"></div>
+	<header>
+		<div class="container">
+			<div class="outer__header">
+				<a href="#">
+					<img src="img/logo.svg" alt="logo">
+				</a>
+				<div class="header__menu">
+					<ul>
+						<li>
+							<a href="singleemails.html" >Search</a>
+						</li>
+						<li>
+							<a href="findersearch.html">Finder</a>
+						</li>
+						<li>
+							<a href="bulkverif2.html">Verification</a>
+						</li>
+						<li class="menu__dropdown--list">
+							<a href="#">Deliverability</a>
+							<div class="menu__dropdown" style="display:none;">
+								<div class="deliverability__wrapper">
+									<div class="head__deliverability">
+										<p>Deliverability tools</p>
+										<span>Test your emails before sending them.</span>
+									</div>
+									<ul>
+										<li>
+											<a href="deliverability2.html">
+ 											     <div class="media__image">
+ 											     	<img src="img/deliv1.svg" alt="deliv1">
+ 											     </div>
+ 											     <div class="desc">
+ 											     	<p>Inbox placement <span>New</span></p>
+ 											     	<span>Find email addresses from a list of websites or companies.</span>
+ 											     </div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+ 											     <div class="media__image">
+ 											     	<img src="img/deliv2.svg" alt="deliv1">
+ 											     </div>
+ 											     <span class="desc">
+ 											     	<p>Blacklist Monitoring</p>
+ 											     	<span>Find email addresses from a list of names and companies.</span>
+ 											     </span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="menu__dropdown--list">
+							<a href="bulktasks.html" >Bulk</a>
+							<div class="menu__dropdown" style="display:none;">
+								<div class="bulk">
+									
+									<ul>
+										<li>
+											<a href="domainsearch.html" >
+ 											     <div class="media__image">
+ 											     	<img src="img/deliv1.svg" alt="deliv1">
+ 											     </div>
+ 											     <div class="desc">
+ 											     	<p>Domain Search <span>New</span></p>
+ 											     	<span>Find email addresses from a list of websites or companies.</span>
+ 											     </div>
+											</a>
+										</li>
+										<li>
+											<a href="bulkfinder2.html">
+ 											     <div class="media__image">
+ 											     	<img src="img/deliv3.svg" alt="deliv1">
+ 											     </div>
+ 											     <span class="desc">
+ 											     	<p>Email Finder</p>
+ 											     	<span>Find email addresses from a list of names and companies.</span>
+ 											     </span>
+											</a>
+										</li>
+										<li>
+											<a href="bulkverif2.html">
+ 											     <div class="media__image shadow">
+ 											     	<img src="img/deliv4.svg" alt="deliv1">
+ 											     </div>
+ 											     <span class="desc">
+ 											     	<p>Email Verifier</p>
+ 											     	<span>Verify a list of email addresses.</span>
+ 											     </span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="leads.html">Leads</a>
+						</li>
+						<li>
+							<a href="campaign2.html">Campaign</a>
+						</li>
+					</ul>
+					<div class="header__controls">
+						<a href="#" class="outline-btn">Buy Credits</a>
+						<ul>
+							<li>
+								<a href="settings.html"><img src="img/settings.svg" alt="settings"></a>
+							</li>
+							<li>
+								<a href="#" class="notification__button"><img src="img/notification.svg" alt="notification"></a>
+								<div class="notification__dropdown">
+									<div class="head__dropdown">
+										<p>Notifications</p>
+										<a href="#">Mark as read</a>
+									</div>
+									<div class="notification__list">
+										<div class="elem__notif">
+											<span style="background-color:#1751D0;"></span>
+											<div class="notif__desc">
+												<p>My main project was edited</p>
+												<span>Jan 23, 2023 at 10:15am</span>
+											</div>
+										</div>
+										<div class="elem__notif">
+											<span style="background-color:#1751D0;"></span>
+											<div class="notif__desc">
+												<p>Invoice #1011 was paid</p>
+												<span>Jan 23, 2023 at 10:15am</span>
+											</div>
+										</div>
+										<div class="elem__notif">
+											<span style="background-color:#1751D0;"></span>
+											<div class="notif__desc">
+												<p>Feedback left on “ASC Redesign”</p>
+												<span>Jan 23, 2023 at 10:15am</span>
+											</div>
+										</div>
+									</div>
+									<div class="more__button">
+										<a href="#">View all notifications</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="profile__info">
+							<a href="#">
+								<!-- <img src="img/avatar.png" alt="avatar"> -->
+								<span class="placeholder"><img src="img/profile.svg" alt=""></span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="menu__button">
+					<a href="#">
+						<span></span>
+						<span></span>
+						<span></span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="main__container">
+		<div class="audience__wrapper">
+			<div class="audience__head">
+				<div class="head__left__">
+					<h6>My first email campaign</h6>
+					<div class="desc__">
+						<p><span>From:</span> James Alfraromeo &lt;hello@company.com&gt;</p>
+						<p><span>Created</span> Jan 27, 2023</p>
+					</div>
+				</div>
+				<div class="head__right__">
+					<span class="paused">Paused</span>
+					<label class="switch">
+					  <input type="checkbox" >
+					  <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="audience__menu">
+				<ul>
+					<li><a href="#" class='active' data-container="content">Content</a></li>
+					<li><a href="#" data-container="audience">Audience</a></li>
+					<li><a href="#" data-container="settings">Settings</a></li>
+					<li><a href="#" data-container="statistics">Statistics</a></li>
+				</ul>
+			</div>
+			<div class="audience__container">
+				<div class="element__audience longer statistics" style="display:none;">
+					<div class="stats__wrapper">
+						<div class="top__stats">
+							<div class="elem__stat">
+								<div class="head__stat">
+									<span><img src="img/stat1.svg" alt="stat"></span>
+									<p>Sent</p>
+								</div>
+								<div class="stat__desc">
+									<span>4,539</span>
+									<div class="stat__info">
+										<p>523 last 24h</p>
+										<span class="up"><img src="img/up.svg" alt="up"> 10%</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="elem__stat">
+								<div class="head__stat">
+									<span><img src="img/stat2.svg" alt="stat"></span>
+									<p>Opened</p>
+								</div>
+								<div class="stat__desc">
+									<span>856</span>
+									<div class="stat__info">
+										<p>52 last 24h</p>
+										<span class="up"><img src="img/up.svg" alt="up"> 9.8%</span>
+									</div>
+								</div>
+							</div>
+							<div class="elem__stat">
+								<div class="head__stat">
+									<span><img src="img/stat3.svg" alt="stat"></span>
+									<p>Clicked</p>
+								</div>
+								<div class="stat__desc">
+									<span>254</span>
+									<div class="stat__info">
+										<p>52 last 24h</p>
+										<span class="down"><img src="img/down.svg" alt="up"> 9.8%</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="elem__stat">
+								<div class="head__stat">
+									<span><img src="img/stat4.svg" alt="stat"></span>
+									<p>Replied</p>
+								</div>
+								<div class="stat__desc">
+									<span>22</span>
+									<div class="stat__info">
+										<p>2 last 24h</p>
+										<span class="down"><img src="img/down.svg" alt="up"> 100%</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="elem__stat">
+								<div class="head__stat">
+									<span><img src="img/stat5.svg" alt="stat"></span>
+									<p>Bounced</p>
+								</div>
+								<div class="stat__desc">
+									<span>9</span>
+									<div class="stat__info">
+										<p>1 last 24h</p>
+										<span class="up"><img src="img/up.svg" alt="up"> 100%</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="stats__table">
+							<div class="table__wrapper">
+								<table class="border__side">
+									<tr>
+										<th class="text-left uppercase colored campaign">Campaign</th>
+										<th class="text-left uppercase colored">pending</th>
+										<th class="text-left uppercase colored">sent</th>
+										<th class="text-left uppercase colored">clicked</th>
+										<th class="text-left uppercase colored">replied</th>
+										<th class="text-left uppercase colored">bounced</th>
+									</tr>
+									<tr>
+										<td class="campaign__td bg-white">
+											<div class="campaign">
+												<span>[A]</span>
+												<p>Main campaign email</p>
+											</div>
+										</td>
+										<td class="bg-white">
+											<p class="regular">0</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">1,423</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">23% (284)</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">0.0% (0)</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">0.0% (0)</p>
+										</td>
+									</tr>
+									<tr>
+										<td class="campaign__td bg-white">
+											<div class="campaign">
+												<span>[A]</span>
+												<p>Main campaign email</p>
+											</div>
+										</td>
+										<td class="bg-white">
+											<p class="regular">0</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">1,423</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">23% (284)</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">0.0% (0)</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">0.0% (0)</p>
+										</td>
+									</tr>
+									<tr>
+										<td class="campaign__td bg-white">
+											<div class="campaign">
+												<span>[A]</span>
+												<p>Main campaign email</p>
+											</div>
+										</td>
+										<td class="bg-white">
+											<p class="regular">0</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">1,423</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">23% (284)</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">0.0% (0)</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">0.0% (0)</p>
+										</td>
+									</tr>
+									<tr>
+										<td class="campaign__td bg-white">
+											<div class="campaign">
+												<span>[A]</span>
+												<p>Main campaign email</p>
+											</div>
+										</td>
+										<td class="bg-white">
+											<p class="regular">0</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">1,423</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">23% (284)</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">0.0% (0)</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">0.0% (0)</p>
+										</td>
+									</tr>
+									<tr>
+										<td class="campaign__td bg-white">
+											<div class="campaign">
+												<span>[A]</span>
+												<p>Main campaign email</p>
+											</div>
+										</td>
+										<td class="bg-white">
+											<p class="regular">0</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">1,423</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">23% (284)</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">0.0% (0)</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">0.0% (0)</p>
+										</td>
+									</tr>
+									<tr>
+										<td class="campaign__td bg-white">
+											<div class="campaign">
+												<span>[A]</span>
+												<p>Main campaign email</p>
+											</div>
+										</td>
+										<td class="bg-white">
+											<p class="regular">0</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">1,423</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">23% (284)</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">0.0% (0)</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">0.0% (0)</p>
+										</td>
+									</tr>
+									<tr>
+										<td class="campaign__td bg-white">
+											<div class="campaign">
+												<span>[A]</span>
+												<p>Main campaign email</p>
+											</div>
+										</td>
+										<td class="bg-white">
+											<p class="regular">0</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">1,423</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">23% (284)</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">0.0% (0)</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">0.0% (0)</p>
+										</td>
+									</tr>
+									<tr>
+										<td class="campaign__td bg-white">
+											<div class="campaign">
+												<span>[A]</span>
+												<p>Main campaign email</p>
+											</div>
+										</td>
+										<td class="bg-white">
+											<p class="regular">0</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">1,423</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">23% (284)</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">0.0% (0)</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">0.0% (0)</p>
+										</td>
+									</tr>
+									<tr>
+										<td class="campaign__td bg-white">
+											<div class="campaign">
+												<span>[A]</span>
+												<p>Main campaign email</p>
+											</div>
+										</td>
+										<td class="bg-white">
+											<p class="regular">0</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">1,423</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">23% (284)</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">0.0% (0)</p>
+										</td>
+										<td class="bg-white">
+											<p class="regular">0.0% (0)</p>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="element__audience settings" style="display:none;">
+					<div class="audience__settings">
+						<div class="head__audience--settings">
+							<p>Settings</p>
+							<span>We may still send you important notifications about your account outside of your notification settings.</span>
+						</div>
+						<div class="content__audience--settings">
+							<div class="elem__audience--setting">
+								<div class="setting__desc">
+									<p>Stop sending</p>
+									<span>Stop leads sequence when the prospects do the following</span>
+								</div>
+								<div class="settings__checkboxes">
+									<div class="elem__setting">
+										<label class="switch">
+										  <input type="checkbox" checked="">
+										  <span class="slider round"></span>
+										  Replies by email
+										</label>
+									</div>
+									<div class="elem__setting">
+										<label class="switch">
+										  <input type="checkbox">
+										  <span class="slider round"></span>
+										  Click on link
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="elem__audience--setting">
+								<div class="setting__desc">
+									<p>Tags</p>
+									<span>These are notifications for when someone tags you in a comment, post or story.</span>
+								</div>
+								<div class="settings__checkboxes">
+									<div class="elem__setting">
+										<label class="switch">
+										  <input type="checkbox" checked="">
+										  <span class="slider round"></span>
+										  Push
+										</label>
+									</div>
+									<div class="elem__setting">
+										<label class="switch">
+										  <input type="checkbox">
+										  <span class="slider round"></span>
+										  Email
+										</label>
+									</div>
+									<div class="elem__setting">
+										<label class="switch">
+										  <input type="checkbox">
+										  <span class="slider round"></span>
+										  SMS
+										</label>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="elem__audience--setting">
+								<div class="setting__desc">
+									<p>Reminders</p>
+									<span>These are notifications to remind you of updates you might have missed.</span>
+								</div>
+								<div class="settings__checkboxes">
+									<div class="elem__setting">
+										<label class="switch">
+										  <input type="checkbox" checked="">
+										  <span class="slider round"></span>
+										  Push
+										</label>
+									</div>
+									<div class="elem__setting">
+										<label class="switch">
+										  <input type="checkbox">
+										  <span class="slider round"></span>
+										  Email
+										</label>
+									</div>
+									<div class="elem__setting">
+										<label class="switch">
+										  <input type="checkbox" checked="">
+										  <span class="slider round"></span>
+										  SMS
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="elem__audience--setting">
+								<div class="setting__desc">
+									<p>More activity about you</p>
+									<span>These are notifications to remind you of updates you might have missed.</span>
+								</div>
+								<div class="settings__checkboxes">
+									<div class="elem__setting">
+										<label class="switch">
+										  <input type="checkbox" checked="">
+										  <span class="slider round"></span>
+										  Push
+										</label>
+									</div>
+									<div class="elem__setting">
+										<label class="switch">
+										  <input type="checkbox">
+										  <span class="slider round"></span>
+										  Email
+										</label>
+									</div>
+									<div class="elem__setting">
+										<label class="switch">
+										  <input type="checkbox">
+										  <span class="slider round"></span>
+										  SMS
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="element__audience audience" style="display:none;">
+					<div class="audience__box">
+						<div class="header__">
+							<div class="buttons">
+								<a href="#" class="outline-btn"><span><img src="img/plusdark.svg" alt="plusdark"></span> Add</a>
+								<a href="#" class="outline-btn"><span><img src="img/exportdark.svg" alt="plusdark"></span> Export all</a>
+								<a href="#" class="outline-btn"><span><img src="img/trashlight.svg" alt="plusdark"></span> Remove all</a>
+							</div>
+							<div class="group__input group__search person__search">
+								<input type="text" placeholder="Search for a file...">
+								<button type="submit"><img src="img/search.svg" alt="search"></button>
+								<div class="search__dropdown" style="display:none;">
+									<p>No results found.</p>
+									<ul>
+										<li>
+											<a href="#" class="search__person">
+												<div class="person__icon">
+													<img src="img/p1.png" alt="p1">
+												</div>
+												<div class="person__desc">
+													<p>email@james.com</p>
+													<span><img src="img/success.svg" alt="success"></span>
+												</div>
+											</a>
+										</li>
+
+										<li>
+											<a href="#" class="search__person">
+												<div class="person__icon">
+													<img src="img/p1.png" alt="p1">
+												</div>
+												<div class="person__desc">
+													<p>delta@james.com</p>
+													<span><img src="img/success.svg" alt="success"></span>
+												</div>
+											</a>
+										</li>
+
+										<li>
+											<a href="#" class="search__person">
+												<div class="person__icon">
+													<img src="img/p1.png" alt="p1">
+												</div>
+												<div class="person__desc">
+													<p>fufik@james.com</p>
+													
+												</div>
+											</a>
+										</li>
+
+										<li>
+											<a href="#" class="search__person">
+												<div class="person__icon">
+													<img src="img/p1.png" alt="p1">
+												</div>
+												<div class="person__desc">
+													<p>fluffy@james.com</p>
+													
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="search__person">
+												<div class="person__icon">
+													<img src="img/p1.png" alt="p1">
+												</div>
+												<div class="person__desc">
+													<p>email@james.com</p>
+													<span><img src="img/success.svg" alt="success"></span>
+												</div>
+											</a>
+										</li>
+
+										<li>
+											<a href="#" class="search__person">
+												<div class="person__icon">
+													<img src="img/p1.png" alt="p1">
+												</div>
+												<div class="person__desc">
+													<p>delta@james.com</p>
+													<span><img src="img/success.svg" alt="success"></span>
+												</div>
+											</a>
+										</li>
+
+										<li>
+											<a href="#" class="search__person">
+												<div class="person__icon">
+													<img src="img/p1.png" alt="p1">
+												</div>
+												<div class="person__desc">
+													<p>fufik@james.com</p>
+													
+												</div>
+											</a>
+										</li>
+
+										<li>
+											<a href="#" class="search__person">
+												<div class="person__icon">
+													<img src="img/p1.png" alt="p1">
+												</div>
+												<div class="person__desc">
+													<p>fluffy@james.com</p>
+													
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="search__person">
+												<div class="person__icon">
+													<img src="img/p1.png" alt="p1">
+												</div>
+												<div class="person__desc">
+													<p>email@james.com</p>
+													<span><img src="img/success.svg" alt="success"></span>
+												</div>
+											</a>
+										</li>
+
+										<li>
+											<a href="#" class="search__person">
+												<div class="person__icon">
+													<img src="img/p1.png" alt="p1">
+												</div>
+												<div class="person__desc">
+													<p>delta@james.com</p>
+													<span><img src="img/success.svg" alt="success"></span>
+												</div>
+											</a>
+										</li>
+
+										<li>
+											<a href="#" class="search__person">
+												<div class="person__icon">
+													<img src="img/p1.png" alt="p1">
+												</div>
+												<div class="person__desc">
+													<p>fufik@james.com</p>
+													
+												</div>
+											</a>
+										</li>
+
+										<li>
+											<a href="#" class="search__person">
+												<div class="person__icon">
+													<img src="img/p1.png" alt="p1">
+												</div>
+												<div class="person__desc">
+													<p>fluffy@james.com</p>
+													
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="content__">
+							<div class="leads__table table__wrapper">
+					<table class="regular-table smaller border__side border">
+						<tbody><tr>
+							<th class="uppercase text-left check__column">EMAil</th>
+							<th class="uppercase text-left">first name</th>
+							<th class="uppercase text-left">last name</th>
+							<th class="uppercase text-left">Company</th>
+							<th class="uppercase text-left">Owner</th>
+							<th class="uppercase text-left controls__column">Actions</th>
+						</tr>
+						<tr>
+							<td class="text-left check__column">
+								<div class="checkbox__wrapper">
+									<label class="checkbox__container">
+									  <input type="checkbox">
+									  <span class="checkmark"></span>
+									  <p class="regular-text">thisisanemail@gmail.com <span><img src="img/success.svg" alt="success"></span></p>
+									</label>
+								</div>
+							</td>
+							<td class="text-left">
+								<p class="grey">Jhon</p>
+							</td>
+							<td class="text-left">
+								<p class="grey">Dupont</p>
+							</td>
+							<td class="text-left">
+								<p class="grey">Apple</p>
+							</td>
+							<td>
+								<div class="avatar">
+									<img src="img/avatarsmall.png" alt="avatarsmall">
+								</div>
+							</td>
+							<td>
+								<div class="controls__wrapper">
+									<a href="#">Edit</a>
+									<a href="#">Delete</a>
+								</div>
+							</td>
+						</tr>
+
+						<tr>
+							<td class="text-left check__column">
+								<div class="checkbox__wrapper">
+									<label class="checkbox__container">
+									  <input type="checkbox">
+									  <span class="checkmark"></span>
+									  <p class="regular-text">jimmy@gmail.com <span><img src="img/success.svg" alt="success"></span></p>
+									</label>
+								</div>
+							</td>
+							<td class="text-left">
+								<p class="grey">Jhon</p>
+							</td>
+							<td class="text-left">
+								<p class="grey">Dupont</p>
+							</td>
+							<td class="text-left">
+								<p class="grey">Apple</p>
+							</td>
+							<td>
+								<div class="avatar">
+									<img src="img/avatarsmall.png" alt="avatarsmall">
+								</div>
+							</td>
+							<td class="controls__column">
+								<div class="controls__wrapper">
+									<a href="#">Edit</a>
+									<a href="#">Delete</a>
+								</div>
+							</td>
+						</tr>
+
+						<tr>
+							<td class="text-left check__column">
+								<div class="checkbox__wrapper">
+									<label class="checkbox__container">
+									  <input type="checkbox">
+									  <span class="checkmark"></span>
+									  <p class="regular-text">alfredbro@gmail.com <span><img src="img/success.svg" alt="success"></span></p>
+									</label>
+								</div>
+							</td>
+							<td class="text-left">
+								<p class="grey">Jhon</p>
+							</td>
+							<td class="text-left">
+								<p class="grey">Dupont</p>
+							</td>
+							<td class="text-left">
+								<p class="grey">Apple</p>
+							</td>
+							<td>
+								<div class="avatar">
+									<img src="img/avatarsmall.png" alt="avatarsmall">
+								</div>
+							</td>
+							<td class="controls__column">
+								<div class="controls__wrapper">
+									<a href="#">Edit</a>
+									<a href="#">Delete</a>
+								</div>
+							</td>
+						</tr>
+
+						<tr>
+							<td class="text-left check__column">
+								<div class="checkbox__wrapper">
+									<label class="checkbox__container">
+									  <input type="checkbox">
+									  <span class="checkmark"></span>
+									  <p class="regular-text">alfredbro@gmail.com <span><img src="img/error.svg" alt="success"></span></p>
+									</label>
+								</div>
+							</td>
+							<td class="text-left">
+								<p class="grey">Jhon</p>
+							</td>
+							<td class="text-left">
+								<p class="grey">Dupont</p>
+							</td>
+							<td class="text-left">
+								<p class="grey">Apple</p>
+							</td>
+							<td>
+								<div class="avatar">
+									<img src="img/avatarsmall.png" alt="avatarsmall">
+								</div>
+							</td>
+							<td class="controls__column">
+								<div class="controls__wrapper">
+									<a href="#">Edit</a>
+									<a href="#">Delete</a>
+								</div>
+							</td>
+						</tr>
+
+						<tr>
+							<td class="text-left check__column">
+								<div class="checkbox__wrapper">
+									<label class="checkbox__container">
+									  <input type="checkbox">
+									  <span class="checkmark"></span>
+									  <p class="regular-text">thisisanemail@gmail.com <span><img src="img/success.svg" alt="success"></span></p>
+									</label>
+								</div>
+							</td>
+							<td class="text-left">
+								<p class="grey">Jhon</p>
+							</td>
+							<td class="text-left">
+								<p class="grey">Dupont</p>
+							</td>
+							<td class="text-left">
+								<p class="grey">Apple</p>
+							</td>
+							<td>
+								<div class="avatar">
+									<img src="img/avatarsmall.png" alt="avatarsmall">
+								</div>
+							</td>
+							<td>
+								<div class="controls__wrapper">
+									<a href="#">Edit</a>
+									<a href="#">Delete</a>
+								</div>
+							</td>
+						</tr>
+
+						<tr>
+							<td class="text-left check__column">
+								<div class="checkbox__wrapper">
+									<label class="checkbox__container">
+									  <input type="checkbox">
+									  <span class="checkmark"></span>
+									  <p class="regular-text">jimmy@gmail.com <span><img src="img/success.svg" alt="success"></span></p>
+									</label>
+								</div>
+							</td>
+							<td class="text-left">
+								<p class="grey">Jhon</p>
+							</td>
+							<td class="text-left">
+								<p class="grey">Dupont</p>
+							</td>
+							<td class="text-left">
+								<p class="grey">Apple</p>
+							</td>
+							<td>
+								<div class="avatar">
+									<img src="img/avatarsmall.png" alt="avatarsmall">
+								</div>
+							</td>
+							<td class="controls__column">
+								<div class="controls__wrapper">
+									<a href="#">Edit</a>
+									<a href="#">Delete</a>
+								</div>
+							</td>
+						</tr>
+
+						<tr>
+							<td class="text-left check__column">
+								<div class="checkbox__wrapper">
+									<label class="checkbox__container">
+									  <input type="checkbox">
+									  <span class="checkmark"></span>
+									  <p class="regular-text">alfredbro@gmail.com <span><img src="img/success.svg" alt="success"></span></p>
+									</label>
+								</div>
+							</td>
+							<td class="text-left">
+								<p class="grey">Jhon</p>
+							</td>
+							<td class="text-left">
+								<p class="grey">Dupont</p>
+							</td>
+							<td class="text-left">
+								<p class="grey">Apple</p>
+							</td>
+							<td>
+								<div class="avatar">
+									<img src="img/avatarsmall.png" alt="avatarsmall">
+								</div>
+							</td>
+							<td class="controls__column">
+								<div class="controls__wrapper">
+									<a href="#">Edit</a>
+									<a href="#">Delete</a>
+								</div>
+							</td>
+						</tr>
+
+						<tr>
+							<td class="text-left check__column">
+								<div class="checkbox__wrapper">
+									<label class="checkbox__container">
+									  <input type="checkbox">
+									  <span class="checkmark"></span>
+									  <p class="regular-text">alfredbro@gmail.com <span><img src="img/error.svg" alt="success"></span></p>
+									</label>
+								</div>
+							</td>
+							<td class="text-left">
+								<p class="grey">Jhon</p>
+							</td>
+							<td class="text-left">
+								<p class="grey">Dupont</p>
+							</td>
+							<td class="text-left">
+								<p class="grey">Apple</p>
+							</td>
+							<td>
+								<div class="avatar">
+									<img src="img/avatarsmall.png" alt="avatarsmall">
+								</div>
+							</td>
+							<td class="controls__column">
+								<div class="controls__wrapper">
+									<a href="#">Edit</a>
+									<a href="#">Delete</a>
+								</div>
+							</td>
+						</tr>
+
+
+						<tr>
+							<td class="text-left check__column">
+								<div class="checkbox__wrapper">
+									<label class="checkbox__container">
+									  <input type="checkbox">
+									  <span class="checkmark"></span>
+									  <p class="regular-text">thisisanemail@gmail.com <span><img src="img/success.svg" alt="success"></span></p>
+									</label>
+								</div>
+							</td>
+							<td class="text-left">
+								<p class="grey">Jhon</p>
+							</td>
+							<td class="text-left">
+								<p class="grey">Dupont</p>
+							</td>
+							<td class="text-left">
+								<p class="grey">Apple</p>
+							</td>
+							<td>
+								<div class="avatar">
+									<img src="img/avatarsmall.png" alt="avatarsmall">
+								</div>
+							</td>
+							<td>
+								<div class="controls__wrapper">
+									<a href="#">Edit</a>
+									<a href="#">Delete</a>
+								</div>
+							</td>
+						</tr>
+
+						<tr>
+							<td class="text-left check__column">
+								<div class="checkbox__wrapper">
+									<label class="checkbox__container">
+									  <input type="checkbox">
+									  <span class="checkmark"></span>
+									  <p class="regular-text">jimmy@gmail.com <span><img src="img/success.svg" alt="success"></span></p>
+									</label>
+								</div>
+							</td>
+							<td class="text-left">
+								<p class="grey">Jhon</p>
+							</td>
+							<td class="text-left">
+								<p class="grey">Dupont</p>
+							</td>
+							<td class="text-left">
+								<p class="grey">Apple</p>
+							</td>
+							<td>
+								<div class="avatar">
+									<img src="img/avatarsmall.png" alt="avatarsmall">
+								</div>
+							</td>
+							<td class="controls__column">
+								<div class="controls__wrapper">
+									<a href="#">Edit</a>
+									<a href="#">Delete</a>
+								</div>
+							</td>
+						</tr>
+
+						<tr>
+							<td class="text-left check__column">
+								<div class="checkbox__wrapper">
+									<label class="checkbox__container">
+									  <input type="checkbox">
+									  <span class="checkmark"></span>
+									  <p class="regular-text">alfredbro@gmail.com <span><img src="img/success.svg" alt="success"></span></p>
+									</label>
+								</div>
+							</td>
+							<td class="text-left">
+								<p class="grey">Jhon</p>
+							</td>
+							<td class="text-left">
+								<p class="grey">Dupont</p>
+							</td>
+							<td class="text-left">
+								<p class="grey">Apple</p>
+							</td>
+							<td>
+								<div class="avatar">
+									<img src="img/avatarsmall.png" alt="avatarsmall">
+								</div>
+							</td>
+							<td class="controls__column">
+								<div class="controls__wrapper">
+									<a href="#">Edit</a>
+									<a href="#">Delete</a>
+								</div>
+							</td>
+						</tr>
+
+						<tr>
+							<td class="text-left check__column">
+								<div class="checkbox__wrapper">
+									<label class="checkbox__container">
+									  <input type="checkbox">
+									  <span class="checkmark"></span>
+									  <p class="regular-text">alfredbro@gmail.com <span><img src="img/error.svg" alt="success"></span></p>
+									</label>
+								</div>
+							</td>
+							<td class="text-left">
+								<p class="grey">Jhon</p>
+							</td>
+							<td class="text-left">
+								<p class="grey">Dupont</p>
+							</td>
+							<td class="text-left">
+								<p class="grey">Apple</p>
+							</td>
+							<td>
+								<div class="avatar">
+									<img src="img/avatarsmall.png" alt="avatarsmall">
+								</div>
+							</td>
+							<td class="controls__column">
+								<div class="controls__wrapper">
+									<a href="#">Edit</a>
+									<a href="#">Delete</a>
+								</div>
+							</td>
+						</tr>
+
+
+						<tr>
+							<td class="text-left check__column">
+								<div class="checkbox__wrapper">
+									<label class="checkbox__container">
+									  <input type="checkbox">
+									  <span class="checkmark"></span>
+									  <p class="regular-text">thisisanemail@gmail.com <span><img src="img/success.svg" alt="success"></span></p>
+									</label>
+								</div>
+							</td>
+							<td class="text-left">
+								<p class="grey">Jhon</p>
+							</td>
+							<td class="text-left">
+								<p class="grey">Dupont</p>
+							</td>
+							<td class="text-left">
+								<p class="grey">Apple</p>
+							</td>
+							<td>
+								<div class="avatar">
+									<img src="img/avatarsmall.png" alt="avatarsmall">
+								</div>
+							</td>
+							<td>
+								<div class="controls__wrapper">
+									<a href="#">Edit</a>
+									<a href="#">Delete</a>
+								</div>
+							</td>
+						</tr>
+
+						<tr>
+							<td class="text-left check__column">
+								<div class="checkbox__wrapper">
+									<label class="checkbox__container">
+									  <input type="checkbox">
+									  <span class="checkmark"></span>
+									  <p class="regular-text">jimmy@gmail.com <span><img src="img/success.svg" alt="success"></span></p>
+									</label>
+								</div>
+							</td>
+							<td class="text-left">
+								<p class="grey">Jhon</p>
+							</td>
+							<td class="text-left">
+								<p class="grey">Dupont</p>
+							</td>
+							<td class="text-left">
+								<p class="grey">Apple</p>
+							</td>
+							<td>
+								<div class="avatar">
+									<img src="img/avatarsmall.png" alt="avatarsmall">
+								</div>
+							</td>
+							<td class="controls__column">
+								<div class="controls__wrapper">
+									<a href="#">Edit</a>
+									<a href="#">Delete</a>
+								</div>
+							</td>
+						</tr>
+
+						<tr>
+							<td class="text-left check__column">
+								<div class="checkbox__wrapper">
+									<label class="checkbox__container">
+									  <input type="checkbox">
+									  <span class="checkmark"></span>
+									  <p class="regular-text">alfredbro@gmail.com <span><img src="img/success.svg" alt="success"></span></p>
+									</label>
+								</div>
+							</td>
+							<td class="text-left">
+								<p class="grey">Jhon</p>
+							</td>
+							<td class="text-left">
+								<p class="grey">Dupont</p>
+							</td>
+							<td class="text-left">
+								<p class="grey">Apple</p>
+							</td>
+							<td>
+								<div class="avatar">
+									<img src="img/avatarsmall.png" alt="avatarsmall">
+								</div>
+							</td>
+							<td class="controls__column">
+								<div class="controls__wrapper">
+									<a href="#">Edit</a>
+									<a href="#">Delete</a>
+								</div>
+							</td>
+						</tr>
+
+						<tr>
+							<td class="text-left check__column">
+								<div class="checkbox__wrapper">
+									<label class="checkbox__container">
+									  <input type="checkbox">
+									  <span class="checkmark"></span>
+									  <p class="regular-text">alfredbro@gmail.com <span><img src="img/error.svg" alt="success"></span></p>
+									</label>
+								</div>
+							</td>
+							<td class="text-left">
+								<p class="grey">Jhon</p>
+							</td>
+							<td class="text-left">
+								<p class="grey">Dupont</p>
+							</td>
+							<td class="text-left">
+								<p class="grey">Apple</p>
+							</td>
+							<td>
+								<div class="avatar">
+									<img src="img/avatarsmall.png" alt="avatarsmall">
+								</div>
+							</td>
+							<td class="controls__column">
+								<div class="controls__wrapper">
+									<a href="#">Edit</a>
+									<a href="#">Delete</a>
+								</div>
+							</td>
+						</tr>
+					</tbody></table>
+				</div>
+						</div>
+					</div>
+				</div>
+				<div class="element__audience content">
+					<div class="content__main--emails">
+						<div class="email__row variant1">
+							<div class="email__head">
+							    <span><img src="img/calendary.svg" alt="calendary"></span>
+								<p><span>Day 1:</span> Opener</p>
+							</div>
+							<div class="email__content">
+								
+								<div class="email__">
+									<span></span>
+									<div class="head__">
+										<p>[A]</p>
+										<div class="head__controls">
+											<ul>
+												<li><a href="#" class="stroke copy__email"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<g clip-path="url(#clip0_317_34550)">
+												<path d="M10.6654 10.6666V12.5333C10.6654 13.28 10.6654 13.6534 10.52 13.9386C10.3922 14.1895 10.1882 14.3935 9.93735 14.5213C9.65214 14.6666 9.27877 14.6666 8.53203 14.6666H3.46536C2.71863 14.6666 2.34526 14.6666 2.06004 14.5213C1.80916 14.3935 1.60519 14.1895 1.47736 13.9386C1.33203 13.6534 1.33203 13.28 1.33203 12.5333V7.46665C1.33203 6.71991 1.33203 6.34654 1.47736 6.06133C1.60519 5.81044 1.80916 5.60647 2.06004 5.47864C2.34526 5.33331 2.71863 5.33331 3.46536 5.33331H5.33203M7.46536 10.6666H12.532C13.2788 10.6666 13.6521 10.6666 13.9374 10.5213C14.1882 10.3935 14.3922 10.1895 14.52 9.93863C14.6654 9.65342 14.6654 9.28005 14.6654 8.53331V3.46665C14.6654 2.71991 14.6654 2.34654 14.52 2.06133C14.3922 1.81044 14.1882 1.60647 13.9374 1.47864C13.6521 1.33331 13.2788 1.33331 12.532 1.33331H7.46536C6.71863 1.33331 6.34526 1.33331 6.06004 1.47864C5.80916 1.60647 5.60519 1.81044 5.47736 2.06133C5.33203 2.34654 5.33203 2.71991 5.33203 3.46665V8.53331C5.33203 9.28005 5.33203 9.65342 5.47736 9.93863C5.60519 10.1895 5.80916 10.3935 6.06004 10.5213C6.34526 10.6666 6.71863 10.6666 7.46536 10.6666Z" stroke="#D1D1D6" stroke-linecap="round" stroke-linejoin="round"/>
+												</g>
+												<defs>
+												<clipPath id="clip0_317_34550">
+												<rect width="16" height="16" fill="white"/>
+												</clipPath>
+												</defs>
+												</svg>
+												</a></li>
+												<li><a href="#" class="stroke remove__email"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path opacity="0.12" d="M12.1978 11.0129L12.6654 4H3.33203L3.79956 11.0129C3.8697 12.065 3.90477 12.5911 4.13202 12.99C4.33209 13.3412 4.63387 13.6235 4.99759 13.7998C5.41072 14 5.93797 14 6.99247 14H9.00493C10.0594 14 10.5867 14 10.9998 13.7998C11.3635 13.6235 11.6653 13.3412 11.8654 12.99C12.0926 12.5911 12.1277 12.065 12.1978 11.0129Z" fill="#D1D1D6"/>
+												<path d="M6 2H10M2 4H14M12.6667 4L12.1991 11.0129C12.129 12.065 12.0939 12.5911 11.8667 12.99C11.6666 13.3412 11.3648 13.6235 11.0011 13.7998C10.588 14 10.0607 14 9.00623 14H6.99377C5.93927 14 5.41202 14 4.99889 13.7998C4.63517 13.6235 4.33339 13.3412 4.13332 12.99C3.90607 12.5911 3.871 12.065 3.80086 11.0129L3.33333 4M6.66667 7V10.3333M9.33333 7V10.3333" stroke="#D1D1D6" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+												</svg></a></li>
+												<li><a href="#" class="fill edit__email"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M4.5071 2.00003L7.33464 2.00003C7.70283 2.00003 8.0013 2.29851 8.0013 2.6667C8.0013 3.03489 7.70283 3.33336 7.33464 3.33336H4.53464C3.96358 3.33336 3.57539 3.33388 3.27533 3.3584C2.98305 3.38228 2.83358 3.42556 2.72932 3.47869C2.47843 3.60652 2.27446 3.81049 2.14663 4.06138C2.0935 4.16564 2.05022 4.31511 2.02634 4.60739C2.00182 4.90745 2.0013 5.29564 2.0013 5.8667V11.4667C2.0013 12.0377 2.00182 12.4259 2.02634 12.726C2.05022 13.0183 2.0935 13.1678 2.14663 13.272C2.27446 13.5229 2.47843 13.7269 2.72932 13.8547C2.83358 13.9078 2.98305 13.9511 3.27533 13.975C3.57539 13.9995 3.96358 14 4.53464 14H10.1346C10.7057 14 11.0939 13.9995 11.3939 13.975C11.6862 13.9511 11.8357 13.9078 11.94 13.8547C12.1908 13.7269 12.3948 13.5229 12.5226 13.272C12.5758 13.1678 12.6191 13.0183 12.6429 12.726C12.6675 12.4259 12.668 12.0377 12.668 11.4667V8.6667C12.668 8.29851 12.9664 8.00003 13.3346 8.00003C13.7028 8.00003 14.0013 8.29851 14.0013 8.6667V11.4942C14.0013 12.0309 14.0013 12.4738 13.9718 12.8346C13.9412 13.2093 13.8755 13.5538 13.7107 13.8773C13.455 14.3791 13.047 14.7871 12.5453 15.0427C12.2217 15.2076 11.8773 15.2733 11.5025 15.3039C11.1417 15.3334 10.6988 15.3334 10.1622 15.3334H4.50709C3.97045 15.3334 3.52755 15.3334 3.16675 15.3039C2.79202 15.2733 2.44755 15.2076 2.12399 15.0427C1.62223 14.7871 1.21428 14.3791 0.958619 13.8773C0.793758 13.5538 0.728049 13.2093 0.697432 12.8346C0.667954 12.4738 0.667961 12.0309 0.667969 11.4942V5.83916C0.667961 5.30252 0.667954 4.85961 0.697432 4.49881C0.728049 4.12408 0.793758 3.77961 0.958619 3.45606C1.21428 2.95429 1.62223 2.54634 2.12399 2.29068C2.44755 2.12582 2.79202 2.06011 3.16675 2.02949C3.52755 2.00001 3.97046 2.00002 4.5071 2.00003Z" fill="#D1D1D6"/>
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M11.8632 1.19529C12.6759 0.382656 13.9934 0.382658 14.806 1.19529C15.6187 2.00793 15.6187 3.32547 14.806 4.1381L8.43088 10.5133C8.41768 10.5265 8.4046 10.5396 8.39163 10.5526C8.2 10.7445 8.03104 10.9138 7.82735 11.0386C7.6484 11.1483 7.45331 11.2291 7.24924 11.2781C7.01694 11.3339 6.77778 11.3337 6.50651 11.3334C6.48815 11.3334 6.46964 11.3334 6.45098 11.3334H5.33462C4.96643 11.3334 4.66795 11.0349 4.66795 10.6667V9.55035C4.66795 9.53169 4.66793 9.51318 4.66792 9.49482C4.66766 9.22355 4.66744 8.98439 4.72321 8.75209C4.77221 8.54802 4.85301 8.35293 4.96267 8.17398C5.0875 7.97029 5.25677 7.80133 5.44876 7.6097C5.46176 7.59673 5.47486 7.58365 5.48806 7.57045L11.8632 1.19529Z" fill="#D1D1D6"/>
+												</svg>
+												</a></li>
+											</ul>
+											<label class="switch">
+											  <input type="checkbox"  checked="">
+											  <span class="slider round"></span>
+											</label>
+										</div>
+									</div>
+									<div class="content__">
+										<span>Greetings, Marcos from emailify.io</span>
+										<p>As member of the Moroccan community, I’d like to announce the retirement of the CEO and chairman of RAM, Massoud Said. <br><br>We’re having memorial ceremony to pr</p>
+									</div>
+								</div>
+								<div class="email__">
+									<span></span>
+									<div class="head__">
+										<p>[B]</p>
+										<div class="head__controls">
+											<ul>
+												<li><a href="#" class="stroke copy__email"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<g clip-path="url(#clip0_317_34550)">
+												<path d="M10.6654 10.6666V12.5333C10.6654 13.28 10.6654 13.6534 10.52 13.9386C10.3922 14.1895 10.1882 14.3935 9.93735 14.5213C9.65214 14.6666 9.27877 14.6666 8.53203 14.6666H3.46536C2.71863 14.6666 2.34526 14.6666 2.06004 14.5213C1.80916 14.3935 1.60519 14.1895 1.47736 13.9386C1.33203 13.6534 1.33203 13.28 1.33203 12.5333V7.46665C1.33203 6.71991 1.33203 6.34654 1.47736 6.06133C1.60519 5.81044 1.80916 5.60647 2.06004 5.47864C2.34526 5.33331 2.71863 5.33331 3.46536 5.33331H5.33203M7.46536 10.6666H12.532C13.2788 10.6666 13.6521 10.6666 13.9374 10.5213C14.1882 10.3935 14.3922 10.1895 14.52 9.93863C14.6654 9.65342 14.6654 9.28005 14.6654 8.53331V3.46665C14.6654 2.71991 14.6654 2.34654 14.52 2.06133C14.3922 1.81044 14.1882 1.60647 13.9374 1.47864C13.6521 1.33331 13.2788 1.33331 12.532 1.33331H7.46536C6.71863 1.33331 6.34526 1.33331 6.06004 1.47864C5.80916 1.60647 5.60519 1.81044 5.47736 2.06133C5.33203 2.34654 5.33203 2.71991 5.33203 3.46665V8.53331C5.33203 9.28005 5.33203 9.65342 5.47736 9.93863C5.60519 10.1895 5.80916 10.3935 6.06004 10.5213C6.34526 10.6666 6.71863 10.6666 7.46536 10.6666Z" stroke="#D1D1D6" stroke-linecap="round" stroke-linejoin="round"/>
+												</g>
+												<defs>
+												<clipPath id="clip0_317_34550">
+												<rect width="16" height="16" fill="white"/>
+												</clipPath>
+												</defs>
+												</svg>
+												</a></li>
+												<li><a href="#" class="stroke remove__email"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path opacity="0.12" d="M12.1978 11.0129L12.6654 4H3.33203L3.79956 11.0129C3.8697 12.065 3.90477 12.5911 4.13202 12.99C4.33209 13.3412 4.63387 13.6235 4.99759 13.7998C5.41072 14 5.93797 14 6.99247 14H9.00493C10.0594 14 10.5867 14 10.9998 13.7998C11.3635 13.6235 11.6653 13.3412 11.8654 12.99C12.0926 12.5911 12.1277 12.065 12.1978 11.0129Z" fill="#D1D1D6"/>
+												<path d="M6 2H10M2 4H14M12.6667 4L12.1991 11.0129C12.129 12.065 12.0939 12.5911 11.8667 12.99C11.6666 13.3412 11.3648 13.6235 11.0011 13.7998C10.588 14 10.0607 14 9.00623 14H6.99377C5.93927 14 5.41202 14 4.99889 13.7998C4.63517 13.6235 4.33339 13.3412 4.13332 12.99C3.90607 12.5911 3.871 12.065 3.80086 11.0129L3.33333 4M6.66667 7V10.3333M9.33333 7V10.3333" stroke="#D1D1D6" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+												</svg></a></li>
+												<li><a href="#" class="fill edit__email"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M4.5071 2.00003L7.33464 2.00003C7.70283 2.00003 8.0013 2.29851 8.0013 2.6667C8.0013 3.03489 7.70283 3.33336 7.33464 3.33336H4.53464C3.96358 3.33336 3.57539 3.33388 3.27533 3.3584C2.98305 3.38228 2.83358 3.42556 2.72932 3.47869C2.47843 3.60652 2.27446 3.81049 2.14663 4.06138C2.0935 4.16564 2.05022 4.31511 2.02634 4.60739C2.00182 4.90745 2.0013 5.29564 2.0013 5.8667V11.4667C2.0013 12.0377 2.00182 12.4259 2.02634 12.726C2.05022 13.0183 2.0935 13.1678 2.14663 13.272C2.27446 13.5229 2.47843 13.7269 2.72932 13.8547C2.83358 13.9078 2.98305 13.9511 3.27533 13.975C3.57539 13.9995 3.96358 14 4.53464 14H10.1346C10.7057 14 11.0939 13.9995 11.3939 13.975C11.6862 13.9511 11.8357 13.9078 11.94 13.8547C12.1908 13.7269 12.3948 13.5229 12.5226 13.272C12.5758 13.1678 12.6191 13.0183 12.6429 12.726C12.6675 12.4259 12.668 12.0377 12.668 11.4667V8.6667C12.668 8.29851 12.9664 8.00003 13.3346 8.00003C13.7028 8.00003 14.0013 8.29851 14.0013 8.6667V11.4942C14.0013 12.0309 14.0013 12.4738 13.9718 12.8346C13.9412 13.2093 13.8755 13.5538 13.7107 13.8773C13.455 14.3791 13.047 14.7871 12.5453 15.0427C12.2217 15.2076 11.8773 15.2733 11.5025 15.3039C11.1417 15.3334 10.6988 15.3334 10.1622 15.3334H4.50709C3.97045 15.3334 3.52755 15.3334 3.16675 15.3039C2.79202 15.2733 2.44755 15.2076 2.12399 15.0427C1.62223 14.7871 1.21428 14.3791 0.958619 13.8773C0.793758 13.5538 0.728049 13.2093 0.697432 12.8346C0.667954 12.4738 0.667961 12.0309 0.667969 11.4942V5.83916C0.667961 5.30252 0.667954 4.85961 0.697432 4.49881C0.728049 4.12408 0.793758 3.77961 0.958619 3.45606C1.21428 2.95429 1.62223 2.54634 2.12399 2.29068C2.44755 2.12582 2.79202 2.06011 3.16675 2.02949C3.52755 2.00001 3.97046 2.00002 4.5071 2.00003Z" fill="#D1D1D6"/>
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M11.8632 1.19529C12.6759 0.382656 13.9934 0.382658 14.806 1.19529C15.6187 2.00793 15.6187 3.32547 14.806 4.1381L8.43088 10.5133C8.41768 10.5265 8.4046 10.5396 8.39163 10.5526C8.2 10.7445 8.03104 10.9138 7.82735 11.0386C7.6484 11.1483 7.45331 11.2291 7.24924 11.2781C7.01694 11.3339 6.77778 11.3337 6.50651 11.3334C6.48815 11.3334 6.46964 11.3334 6.45098 11.3334H5.33462C4.96643 11.3334 4.66795 11.0349 4.66795 10.6667V9.55035C4.66795 9.53169 4.66793 9.51318 4.66792 9.49482C4.66766 9.22355 4.66744 8.98439 4.72321 8.75209C4.77221 8.54802 4.85301 8.35293 4.96267 8.17398C5.0875 7.97029 5.25677 7.80133 5.44876 7.6097C5.46176 7.59673 5.47486 7.58365 5.48806 7.57045L11.8632 1.19529Z" fill="#D1D1D6"/>
+												</svg>
+												</a></li>
+											</ul>
+											<label class="switch">
+											  <input type="checkbox"  checked="">
+											  <span class="slider round"></span>
+											</label>
+										</div>
+									</div>
+									<div class="content__">
+										<span>Greetings, Marcos from emailify.io</span>
+										<p>As member of the Moroccan community, I’d like to announce the retirement of the CEO and chairman of RAM, Massoud Said. <br><br>We’re having memorial ceremony to pr</p>
+									</div>
+								</div>
+								<div class="add__variant variant1" >
+									<a href="#" data-variant="variant1">
+										<span><img src="img/addvariant.svg" alt="addvariant"></span>
+										<p>Add variant</p>
+									</a>
+								</div>
+
+							</div>
+							
+						</div>
+						<div class="add__follow--up">
+							<a href="#" class='outline-btn'>+ add follow-up</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal__wrapper" style="display:none;">
+		<div class="inner__modal">
+			<div class="modal__box template__">
+				<form action="">
+					<div class="main__template--" >
+						<div class="subject__top">
+							<div class="template__name">
+								<span>Template name:</span>
+								<input type="text" value="New template">
+							</div>
+							<div class="subject__field">
+								<span>Subject:</span>
+								<input type="text" value="This is my subject">
+							</div>
+							<div class="subject__controls">
+								<a href="#" class="outline-btn open__template--button">Use template</a>
+								<a href="#" class="regular-btn test__score--button">Test score</a>
+							</div>
+						</div>
+						<div class="subject__area">
+							<textarea name="" class="textarea" id="" cols="30" rows="10">
+								Hi {{first_name}}, <br>
+								In working with other [[industry or position]], one of the key issues they’re struggling with is [[key issue]]. <br>
+								This past year we helped numerous companies to [[business driver]], resulting in [[money saved, revenue added, productivity increases]]. <br>
+								If this is something you’re challenged with too, let’s set up a quick call. I have some ideas that might help. <br>
+								All the best,[[your name]]
+							</textarea>
+							<div class="float__controls">
+								<div class="button__wrap">
+									<a href="#" class="outline-btn">AI enhancer</a>
+								</div>
+								<div class="button__wrap attribute__button">
+									<div class="box__attribute" style="display:none;">
+										<div class="group__dropdown  default__dropdown ">
+											<p>Attribute</p>
+											<a href="#" class="picked"><p><span class="text">First name</span></p> <img src="img/arrowright.svg" alt="arrowright" class="arrow__right"></a>
+											<div class="dropdown__box" style="display:none;">
+												<ul>
+													<li><a href="#"><span>First name</span></a></li>
+													<li><a href="#" ><span>Last name</span></a></li>
+													<li><a href="#"><span>Company name</span></a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="group__dropdown  default__dropdown disabled">
+											<p>Fallback</p>
+											<a href="#" class="picked"><p><span class="text">Customer</span></p> <img src="img/arrowright.svg" alt="arrowright" class="arrow__right"></a>
+											<span class="tooltip__float" data-tooltip="Some random text about something"><img src="img/infoicon.svg" alt="success"></span>
+											<div class="dropdown__box" style="display:none;">
+												<ul>
+													<li><a href="#"><span>First name</span></a></li>
+													<li><a href="#" ><span>Last name</span></a></li>
+													<li><a href="#"><span>Company name</span></a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<a href="#" class="outline-btn insert__attribute--button">Insert attribute</a>
+								</div>
+							</div>
+						</div>
+						<div class="subject__bottom">
+							<a href="#" class="outline-btn cancel">Discard changes</a>
+							<a href="#" class="regular-btn">Save changes</a>
+						</div>
+					</div>
+					<div class="template__picker" style="display:none;">
+						<div class="head__templates">
+							<div class="left__templates">
+								<a href="#"><span><img src="img/backbutton.svg" alt="backbutton"></span> Templates </a>
+								<p>Choose and insert a ready template.</p>
+							</div>
+							<div class="right__templates">
+								<a href="#" class="outline-btn">Create new</a>
+							</div>
+						</div>
+						<div class="template__filter">
+							<ul>
+								<li><a href="#">Sales</a></li>
+								<li><a href="#">Marketing</a></li>
+								<li><a href="#">Follow-up</a></li>
+								<li><a href="#">Recruitment</a></li>
+								<li><a href="#">Networking</a></li>
+							</ul>
+						</div>
+						<div class="templates__box">
+							<div class="inner__templates">
+								<a href="#" class="el__template Sales Marketing">
+									<div class="el__content">
+										<p><span>Hi {{first_name}},</span><br>
+										In working with other [[industry or position]], one of the key issues they’re struggling with is this what you’re looking</p>
+									</div>
+									<div class="el__tags">
+										<ul>
+											<li><span>Sales</span></li>
+											<li><span>Marketing</span></li>
+										</ul>
+									</div>
+								</a>
+
+								<a href="#" class="el__template Follow-up Recruitment">
+									<div class="el__content">
+										<p><span>Hi {{first_name}},</span><br>
+										In working with other [[industry or position]], one of the key issues they’re struggling with is this what you’re looking</p>
+									</div>
+									<div class="el__tags">
+										<ul>
+											<li><span>Follow-up</span></li>
+											<li><span>Recruitment</span></li>
+										</ul>
+									</div>
+								</a>
+								<a href="#" class="el__template Sales Marketing">
+									<div class="el__content">
+										<p><span>Hi {{first_name}},</span><br>
+										In working with other [[industry or position]], one of the key issues they’re struggling with is this what you’re looking</p>
+									</div>
+									<div class="el__tags">
+										<ul>
+											<li><span>Sales</span></li>
+											<li><span>Marketing</span></li>
+										</ul>
+									</div>
+								</a>
+
+								<a href="#" class="el__template Follow-up Recruitment Networking">
+									<div class="el__content">
+										<p><span>Hi {{first_name}},</span><br>
+										In working with other [[industry or position]], one of the key issues they’re struggling with is this what you’re looking</p>
+									</div>
+									<div class="el__tags">
+										<ul>
+											<li><span>Follow-up</span></li>
+											<li><span>Recruitment</span></li>
+											<li><span>Networking</span></li>
+										</ul>
+									</div>
+								</a>
+								<a href="#" class="el__template Sales Marketing">
+									<div class="el__content">
+										<p><span>Hi {{first_name}},</span><br>
+										In working with other [[industry or position]], one of the key issues they’re struggling with is this what you’re looking</p>
+									</div>
+									<div class="el__tags">
+										<ul>
+											<li><span>Sales</span></li>
+											<li><span>Marketing</span></li>
+										</ul>
+									</div>
+								</a>
+
+								<a href="#" class="el__template Follow-up Recruitment">
+									<div class="el__content">
+										<p><span>Hi {{first_name}},</span><br>
+										In working with other [[industry or position]], one of the key issues they’re struggling with is this what you’re looking</p>
+									</div>
+									<div class="el__tags">
+										<ul>
+											<li><span>Follow-up</span></li>
+											<li><span>Recruitment</span></li>
+										</ul>
+									</div>
+								</a>
+								<a href="#" class="el__template Sales Marketing Networking">
+									<div class="el__content">
+										<p><span>Hi {{first_name}},</span><br>
+										In working with other [[industry or position]], one of the key issues they’re struggling with is this what you’re looking</p>
+									</div>
+									<div class="el__tags">
+										<ul>
+											<li><span>Sales</span></li>
+											<li><span>Marketing</span></li>
+											<li><span>Networking</span></li>
+										</ul>
+									</div>
+								</a>
+
+								<a href="#" class="el__template Follow-up Recruitment">
+									<div class="el__content">
+										<p><span>Hi {{first_name}},</span><br>
+										In working with other [[industry or position]], one of the key issues they’re struggling with is this what you’re looking</p>
+									</div>
+									<div class="el__tags">
+										<ul>
+											<li><span>Follow-up</span></li>
+											<li><span>Recruitment</span></li>
+										</ul>
+									</div>
+								</a>
+								<a href="#" class="el__template Sales Marketing Networking">
+									<div class="el__content">
+										<p><span>Hi {{first_name}},</span><br>
+										In working with other [[industry or position]], one of the key issues they’re struggling with is this what you’re looking</p>
+									</div>
+									<div class="el__tags">
+										<ul>
+											<li><span>Sales</span></li>
+											<li><span>Marketing</span></li>
+											<li><span>Networking</span></li>
+										</ul>
+									</div>
+								</a>
+
+								<a href="#" class="el__template Follow-up Recruitment">
+									<div class="el__content">
+										<p><span>Hi {{first_name}},</span><br>
+										In working with other [[industry or position]], one of the key issues they’re struggling with is this what you’re looking</p>
+									</div>
+									<div class="el__tags">
+										<ul>
+											<li><span>Follow-up</span></li>
+											<li><span>Recruitment</span></li>
+										</ul>
+									</div>
+								</a>
+								<a href="#" class="el__template Sales Marketing">
+									<div class="el__content">
+										<p><span>Hi {{first_name}},</span><br>
+										In working with other [[industry or position]], one of the key issues they’re struggling with is this what you’re looking</p>
+									</div>
+									<div class="el__tags">
+										<ul>
+											<li><span>Sales</span></li>
+											<li><span>Marketing</span></li>
+										</ul>
+									</div>
+								</a>
+
+								<a href="#" class="el__template Follow-up Recruitment">
+									<div class="el__content">
+										<p><span>Hi {{first_name}},</span><br>
+										In working with other [[industry or position]], one of the key issues they’re struggling with is this what you’re looking</p>
+									</div>
+									<div class="el__tags">
+										<ul>
+											<li><span>Follow-up</span></li>
+											<li><span>Recruitment</span></li>
+										</ul>
+									</div>
+								</a>
+								<a href="#" class="el__template Sales Marketing">
+									<div class="el__content">
+										<p><span>Hi {{first_name}},</span><br>
+										In working with other [[industry or position]], one of the key issues they’re struggling with is this what you’re looking</p>
+									</div>
+									<div class="el__tags">
+										<ul>
+											<li><span>Sales</span></li>
+											<li><span>Marketing</span></li>
+										</ul>
+									</div>
+								</a>
+
+								<a href="#" class="el__template Follow-up Recruitment">
+									<div class="el__content">
+										<p><span>Hi {{first_name}},</span><br>
+										In working with other [[industry or position]], one of the key issues they’re struggling with is this what you’re looking</p>
+									</div>
+									<div class="el__tags">
+										<ul>
+											<li><span>Follow-up</span></li>
+											<li><span>Recruitment</span></li>
+										</ul>
+									</div>
+								</a>
+
+
+							</div>
+						</div>
+					</div>
+					<div class="test__score" style="display:none;">
+						<div class="head__test">
+							<a href="#"><img src="img/backbutton.svg" alt="backbutton"> Test score</a>
+						</div>
+						<div class="test__grid">
+							<div class="elem__grid">
+								<div class="test__provider">
+									<span><img src="img/provider1.png" alt="provider"></span>
+									<p>Gmail</p>
+								</div>
+								<div class="provider__desc">
+									<ul class="stat">
+										<li><span class="dot green"></span> 75% Inbox</li>
+										<li><span class="dot yellow"></span> 15% Spam</li>
+										<li><span class="dot red"></span> 10% Undelivrable</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="elem__grid">
+								<div class="test__provider">
+									<span><img src="img/provider2.svg" alt="provider"></span>
+									<p>Authentication</p>
+								</div>
+								<div class="provider__desc">
+									<ul class="auth">
+										<li><span><img src="img/error.svg" alt="error"></span> DMAK</li>
+										<li><span><img src="img/error.svg" alt="error"></span> SPF</li>
+										<li><span><img src="img/success.svg" alt="error"></span> DKIM</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="elem__grid">
+								<div class="test__provider">
+									<span><img src="img/provider3.svg" alt="provider"></span>
+									<p>SpamAssassin</p>
+								</div>
+								<div class="provider__desc">
+									<ul class="score">
+										<li><span><img src="img/warning.svg" alt="warning"></span> score 5.2</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="elem__grid">
+								<div class="test__provider">
+									<span><img src="img/provider4.svg" alt="provider"></span>
+									<p>Links validator</p>
+								</div>
+								<div class="provider__desc">
+									<ul class="score">
+										<li><span><img src="img/error.svg" alt="error"></span> 3 images</li>
+										<li><span><img src="img/error.svg" alt="error"></span> 3 broken links</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="elem__grid">
+								<div class="test__provider">
+									<span><img src="img/provider5.svg" alt="provider"></span>
+									<p>Blacklist monitoring</p>
+								</div>
+								<div class="provider__desc">
+									<ul class="score">
+										<li><span><img src="img/warning.svg" alt="error"></span> 2 issues</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="modal__wrapper" style="display:none;">
+		<div class="inner__modal">
+			<div class="modal__box delete__email">
+				<a href="#" class="close__modal"><img src="img/closemodal.svg" alt="closemodal"></a>
+				<h6>Delete Email content</h6>
+				<p>Are you sure you want to delete this email from your campaign. This action cannot be undone.</p>
+				<div class="button__wrapper">
+					<a href="#">Yes, Delete email</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script
+  src="https://code.jquery.com/jquery-3.6.4.js"
+  integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+	<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/jquery.tinymce.min.js" referrerpolicy="origin"></script>
+  	<script src="js/circle-progress.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body >
+	<div class="overlay"></div>
+	<div class="overlay__popup"></div>
+	<div class="float__tooltip--box" style="display:none;">
+		<p></p>
+	</div>
+	<header>
+		<div class="container">
+			<div class="outer__header">
+				<a href="#">
+					<img src="img/logo.svg" alt="logo">
+				</a>
+				<div class="header__menu">
+					<ul>
+						<li>
+							<a href="singleemails.html" >Search</a>
+						</li>
+						<li>
+							<a href="findersearch.html">Finder</a>
+						</li>
+						<li>
+							<a href="bulkverif2.html">Verification</a>
+						</li>
+						<li class="menu__dropdown--list">
+							<a href="#">Deliverability</a>
+							<div class="menu__dropdown" style="display:none;">
+								<div class="deliverability__wrapper">
+									<div class="head__deliverability">
+										<p>Deliverability tools</p>
+										<span>Test your emails before sending them.</span>
+									</div>
+									<ul>
+										<li>
+											<a href="deliverability2.html">
+ 											     <div class="media__image">
+ 											     	<img src="img/deliv1.svg" alt="deliv1">
+ 											     </div>
+ 											     <div class="desc">
+ 											     	<p>Inbox placement <span>New</span></p>
+ 											     	<span>Find email addresses from a list of websites or companies.</span>
+ 											     </div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+ 											     <div class="media__image">
+ 											     	<img src="img/deliv2.svg" alt="deliv1">
+ 											     </div>
+ 											     <span class="desc">
+ 											     	<p>Blacklist Monitoring</p>
+ 											     	<span>Find email addresses from a list of names and companies.</span>
+ 											     </span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="menu__dropdown--list">
+							<a href="bulktasks.html" class="active">Bulk</a>
+							<div class="menu__dropdown" style="display:none;">
+								<div class="bulk">
+									
+									<ul>
+										<li>
+											<a href="domainsearch.html" >
+ 											     <div class="media__image">
+ 											     	<img src="img/deliv1.svg" alt="deliv1">
+ 											     </div>
+ 											     <div class="desc">
+ 											     	<p>Domain Search <span>New</span></p>
+ 											     	<span>Find email addresses from a list of websites or companies.</span>
+ 											     </div>
+											</a>
+										</li>
+										<li>
+											<a href="bulkfinder2.html" class="active">
+ 											     <div class="media__image">
+ 											     	<img src="img/deliv3.svg" alt="deliv1">
+ 											     </div>
+ 											     <span class="desc">
+ 											     	<p>Email Finder</p>
+ 											     	<span>Find email addresses from a list of names and companies.</span>
+ 											     </span>
+											</a>
+										</li>
+										<li>
+											<a href="bulkverif2.html">
+ 											     <div class="media__image shadow">
+ 											     	<img src="img/deliv4.svg" alt="deliv1">
+ 											     </div>
+ 											     <span class="desc">
+ 											     	<p>Email Verifier</p>
+ 											     	<span>Verify a list of email addresses.</span>
+ 											     </span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="leads.html">Leads</a>
+						</li>
+						<li>
+							<a href="campaign2.html">Campaign</a>
+						</li>
+					</ul>
+					<div class="header__controls">
+						<a href="#" class="outline-btn">Buy Credits</a>
+						<ul>
+							<li>
+								<a href="settings.html"><img src="img/settings.svg" alt="settings"></a>
+							</li>
+							<li>
+								<a href="#" class="notification__button"><img src="img/notification.svg" alt="notification"></a>
+								<div class="notification__dropdown">
+									<div class="head__dropdown">
+										<p>Notifications</p>
+										<a href="#">Mark as read</a>
+									</div>
+									<div class="notification__list">
+										<div class="elem__notif">
+											<span style="background-color:#1751D0;"></span>
+											<div class="notif__desc">
+												<p>My main project was edited</p>
+												<span>Jan 23, 2023 at 10:15am</span>
+											</div>
+										</div>
+										<div class="elem__notif">
+											<span style="background-color:#1751D0;"></span>
+											<div class="notif__desc">
+												<p>Invoice #1011 was paid</p>
+												<span>Jan 23, 2023 at 10:15am</span>
+											</div>
+										</div>
+										<div class="elem__notif">
+											<span style="background-color:#1751D0;"></span>
+											<div class="notif__desc">
+												<p>Feedback left on “ASC Redesign”</p>
+												<span>Jan 23, 2023 at 10:15am</span>
+											</div>
+										</div>
+									</div>
+									<div class="more__button">
+										<a href="#">View all notifications</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="profile__info">
+							<a href="#">
+								<!-- <img src="img/avatar.png" alt="avatar"> -->
+								<span class="placeholder"><img src="img/profile.svg" alt=""></span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="menu__button">
+					<a href="#">
+						<span></span>
+						<span></span>
+						<span></span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="main__container">
+		<div class="domain__search--container">
+			<form action="">
+				<div class="domain__search--box">
+					<div class="head__search--box">
+						<div class="back__button">
+							<a href="#">
+								<span><img src="img/backbutton.svg" alt="backbutton"></span> Bulk Finder
+							</a>
+						</div>
+						<a href="#" class="regular-btn new__bulkfinder--button"><span><img src="img/plus.svg" alt="plus"></span> New Bulk</a>
+					</div>
+					<div class="empty__domain">
+						<span><img src="img/noreports.svg" alt="norepors"></span>
+						<h6>No bulk task, yet.</h6>
+						<p>Find email addresses from multiple companies using the Bulk Domain Search.</p>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="float__box new__bulk--finder" style="display:none;">
+			<form action="">
+				<div class="upload__box">
+					<div class="head__box">
+						<p>New Bulk Finder</p>
+						<a href="#"><img src="img/closemodal.svg" alt="closemodal"></a>
+					</div>
+					<div class="upload__box--wrapper">
+						<div class="container__upload">
+							<div class="upload__main">
+								<div class="upload__step step__one">
+									<div class="upload__head">
+										<span></span>
+										<p>Upload list (1/3)</p>
+									</div>
+									<div class="upload__content">
+										<div class="example__desc">
+											<p>Your file must use commas or semicolons as column delimiters. <a href="#">Download an example</a></p>
+										</div>
+										<div class="droppable__box">
+											<input type="file">
+											<span><img src="img/uploadicon.svg" alt="uploadicon"></span>
+											<p><a href="#">Click to upload</a> or drag and drop <br> <span>TXT or CSV file (max. 20mb)</span></p>
+										</div>
+										<div class="files__grid" style="display:none;">
+											<!-- <div class='elem__file'>
+												<span><img src='img/fileuploadicon.svg' alt='fileicon'></span>
+												<div class='file__desc'>
+													<div class='top__part'>
+														<div class='lf__desc'>
+															<p>Tech_developers.csv</p>
+															<span>200 KB</span>
+														</div>
+														<div class='rg__desc'>
+															<a href='#'><img src='img/trashfile.svg' alt='trashfile'></a>
+														</div>
+													</div>
+													<div class="header" style="display:none;">
+														<span>Header included</span>
+													</div>
+													<div class='bottom__part'>
+														<div class='progress'>
+															<div class='active' style='width:10%;'></div>
+														</div>
+														<span>10%</span>
+													</div>
+												</div>
+											</div> -->
+										</div>
+										<div class="switcher__elem include__header--checkbox">
+											<div class="left__switcher">
+												<span>Include header</span>
+												<p>File header located in 1st row, labeling columns.</p>
+											</div>
+											<div class="right__switcher">
+												<label class="switch">
+												  <input type="checkbox" >
+												  <span class="slider round"></span>
+												</label>
+											</div>
+										</div>
+										<div class="next__step" style="display:none;">
+											<a href="#" class="outline-btn">Next step <span><img src="img/arrowdown.svg" alt="arrowdown"></span></a>
+										</div>
+									</div>
+								</div>
+								<div class="upload__step inactive step__two">
+									<div class="upload__head">
+										<span></span>
+										<p>Map fields</p>
+									</div>
+									<div class="map__fields" style="display:none;">
+										<div class="dropdown__container">
+											<p>First row</p>
+											<div class="group__dropdown  default__dropdown  map__">
+												<a href="#" class="picked" data-row="row1"><p><span class="text">First name</span></p> <img src="img/arrowright.svg" alt="arrowright" class="arrow__right"></a>
+												<div class="dropdown__box" style="display:none;">
+													<ul>
+														<li><a href="#" data-row="row1"><span>First name</span></a></li>
+														<li><a href="#" data-row="row2"><span>Last name</span></a></li>
+														<li><a href="#" data-row="row3"><span>Company name</span></a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="dropdown__container">
+											<p>Second row</p>
+											<div class="group__dropdown  default__dropdown  map__">
+												<a href="#" class="picked" data-row="row2"><p><span class="text">Last name</span></p> <img src="img/arrowright.svg" alt="arrowright" class="arrow__right"></a>
+												<div class="dropdown__box" style="display:none;">
+													<ul>
+														<li><a href="#" data-row="row2"><span>Last name</span></a></li>
+														<li><a href="#" data-row="row1"><span>First name</span></a></li>
+														<li><a href="#" data-row="row3"><span>Company name</span></a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="dropdown__container">
+											<p>Third row</p>
+											<div class="group__dropdown  default__dropdown top map__">
+												<a href="#" class="picked" data-row="row3"><p><span class="text">Company name</span></p> <img src="img/arrowright.svg" alt="arrowright" class="arrow__right"></a>
+												<div class="dropdown__box" style="display:none;">
+													<ul>
+														<li><a href="#" data-row="row3"><span>Company name</span></a></li>
+														<li><a href="#" data-row="row1"><span>First name</span></a></li>
+														<li><a href="#" data-row="row2"><span>Last name</span></a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="preview__box">
+											 <p>Preview</p>
+											 	<table>
+											 		<tr>
+											 			<th>First name</th>
+											 			<th>Second name</th>
+											 			<th>Company name</th>
+											 		</tr>
+											 		<tr>
+											 			<td>Alex</td>
+											 			<td>Jackson</td>
+											 			<td>Apple</td>
+											 		</tr>
+											 		<tr>
+											 			<td>Alex</td>
+											 			<td>Jackson</td>
+											 			<td>Apple</td>
+											 		</tr>
+											 		<tr>
+											 			<td>Alex</td>
+											 			<td>Jackson</td>
+											 			<td>Apple</td>
+											 		</tr>
+											 	</table>
+										</div>
+										<div class="next__step">
+											<a href="#" class="outline-btn">Launch <span><img src="img/arrowdown.svg" alt="arrowdown"></span></a>
+										</div>
+									</div>
+								</div>
+								<div class="upload__step inactive step__three">
+									<div class="upload__head">
+										<span></span>
+										<p>Export result</p>
+									</div>
+									<div class="content__progress" style="display:none;">
+										<div class="search__progress">
+											<p>Search in progress...</p>
+											<div class="progress__bottom">
+												<div class="progress">
+													<div class="active" style="width:25%;"></div>
+												</div>
+												<p>4/4</p>
+											</div>
+										</div>
+										<div class="progress__steps">
+											<p>Searching for facebook.com...</p>
+											<p><span>Found facebook.com</span> 12 emails - 4 generic</p>
+											<p>Searching for facebook.com...</p>
+											<p><span>Found facebook.com</span>  12 emails - 4 generic</p>
+											<p><img src="img/completed.svg" alt="completed"> Search completed</p>
+										</div>
+										<div class="progress__button">
+											<a href="#" class="regular-btn">View results</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div class="modal__wrapper" style="display:none;">
+		<div class="inner__modal">
+			<div class="modal__box new__report">
+				<div class="loading" style="display:none;">
+					<div class="inner__loading">
+						<span><img src="img/loading.svg" alt="loading"></span>
+						<p>Just a moment <br> <span>Waiting the arrival of your email..</span></p>
+					</div>
+				</div>
+				<form action="">
+					<div class="head__report">
+						<p>New report</p>
+						<span>Add the following email seed as participants to your email</span>
+					</div>
+					<div class="tags__wrapper">
+						<a href="#" data-copy="some text bla bla bla bla">
+							<span><img src="img/copycircle.svg" alt="copycircle"></span>
+							<p>Click to copy</p>
+						</a>
+						<div class="elem__tag">
+							<p>alma.lawson@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>tanya.hill@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>g@email.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>dolores.chambers@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>tim@gmail.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>jennings@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>sara.cruz@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>tim.jennings@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>bro@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>dolores.chambers@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>tim@gmail.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>jennings@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>sara.cruz@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>tim.jennings@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>yesm@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>yesm@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>tim.jennings@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>yesm@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>yesm@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>tim.jennings@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>yesm@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>yesm@example.com</p>
+						</div>
+					</div>
+					<div class="controls__reports">
+						<div class="left__report">
+							<a href="#">Watch tutorial</a>
+						</div>
+						<div class="right__reports">
+							<a href="#" class="outline-btn cancel__modal">Cancel</a>
+							<button type="submit" class="regular-btn bigger">Check results</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script
+  src="https://code.jquery.com/jquery-3.6.4.js"
+  integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+  crossorigin="anonymous"></script>
+  	<script src="js/circle-progress.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

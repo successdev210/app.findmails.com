@@ -1,0 +1,1752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body >
+	<div class="overlay"></div>
+	<header>
+		<div class="container">
+			<div class="outer__header">
+				<a href="#">
+					<img src="img/logo.svg" alt="logo">
+				</a>
+				<div class="header__menu">
+					<ul>
+						<li>
+							<a href="singleemails.html" >Search</a>
+						</li>
+						<li>
+							<a href="findersearch.html">Finder</a>
+						</li>
+						<li>
+							<a href="bulkverif2.html">Verification</a>
+						</li>
+						<li class="menu__dropdown--list">
+							<a href="#">Deliverability</a>
+							<div class="menu__dropdown" style="display:none;">
+								<div class="deliverability__wrapper">
+									<div class="head__deliverability">
+										<p>Deliverability tools</p>
+										<span>Test your emails before sending them.</span>
+									</div>
+									<ul>
+										<li>
+											<a href="deliverability2.html">
+ 											     <div class="media__image">
+ 											     	<img src="img/deliv1.svg" alt="deliv1">
+ 											     </div>
+ 											     <div class="desc">
+ 											     	<p>Inbox placement <span>New</span></p>
+ 											     	<span>Find email addresses from a list of websites or companies.</span>
+ 											     </div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+ 											     <div class="media__image">
+ 											     	<img src="img/deliv2.svg" alt="deliv1">
+ 											     </div>
+ 											     <span class="desc">
+ 											     	<p>Blacklist Monitoring</p>
+ 											     	<span>Find email addresses from a list of names and companies.</span>
+ 											     </span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="menu__dropdown--list">
+							<a href="bulktasks.html" >Bulk</a>
+							<div class="menu__dropdown" style="display:none;">
+								<div class="bulk">
+									
+									<ul>
+										<li>
+											<a href="domainsearch.html" >
+ 											     <div class="media__image">
+ 											     	<img src="img/deliv1.svg" alt="deliv1">
+ 											     </div>
+ 											     <div class="desc">
+ 											     	<p>Domain Search <span>New</span></p>
+ 											     	<span>Find email addresses from a list of websites or companies.</span>
+ 											     </div>
+											</a>
+										</li>
+										<li>
+											<a href="bulkfinder2.html">
+ 											     <div class="media__image">
+ 											     	<img src="img/deliv3.svg" alt="deliv1">
+ 											     </div>
+ 											     <span class="desc">
+ 											     	<p>Email Finder</p>
+ 											     	<span>Find email addresses from a list of names and companies.</span>
+ 											     </span>
+											</a>
+										</li>
+										<li>
+											<a href="bulkverif2.html">
+ 											     <div class="media__image shadow">
+ 											     	<img src="img/deliv4.svg" alt="deliv1">
+ 											     </div>
+ 											     <span class="desc">
+ 											     	<p>Email Verifier</p>
+ 											     	<span>Verify a list of email addresses.</span>
+ 											     </span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="leads.html">Leads</a>
+						</li>
+						<li>
+							<a href="campaign2.html">Campaign</a>
+						</li>
+					</ul>
+					<div class="header__controls">
+						<a href="#" class="outline-btn">Buy Credits</a>
+						<ul>
+							<li>
+								<a href="settings.html"><img src="img/settings.svg" alt="settings"></a>
+							</li>
+							<li>
+								<a href="#" class="notification__button"><img src="img/notification.svg" alt="notification"></a>
+								<div class="notification__dropdown">
+									<div class="head__dropdown">
+										<p>Notifications</p>
+										<a href="#">Mark as read</a>
+									</div>
+									<div class="notification__list">
+										<div class="elem__notif">
+											<span style="background-color:#1751D0;"></span>
+											<div class="notif__desc">
+												<p>My main project was edited</p>
+												<span>Jan 23, 2023 at 10:15am</span>
+											</div>
+										</div>
+										<div class="elem__notif">
+											<span style="background-color:#1751D0;"></span>
+											<div class="notif__desc">
+												<p>Invoice #1011 was paid</p>
+												<span>Jan 23, 2023 at 10:15am</span>
+											</div>
+										</div>
+										<div class="elem__notif">
+											<span style="background-color:#1751D0;"></span>
+											<div class="notif__desc">
+												<p>Feedback left on “ASC Redesign”</p>
+												<span>Jan 23, 2023 at 10:15am</span>
+											</div>
+										</div>
+									</div>
+									<div class="more__button">
+										<a href="#">View all notifications</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="profile__info">
+							<a href="#">
+								<!-- <img src="img/avatar.png" alt="avatar"> -->
+								<span class="placeholder"><img src="img/profile.svg" alt=""></span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="menu__button">
+					<a href="#">
+						<span></span>
+						<span></span>
+						<span></span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="main__container">
+		<div class="placement__wrapper">
+			<div class="breadcrumbs">
+				<ul>
+					<li><a href="#">Inbox placement</a></li>
+					<li class="spacer">></li>
+					<li> Shop Smart - Get 20%..</li>
+				</ul>
+			</div>
+			<div class="placement__main">
+				<div class="title__placement">
+					<div class="left__placement">
+						<span style="background-color:#D3CFAB;"><img src="img/title.svg" alt="title"></span>
+						<div class="placement__info">
+							<p>Shop Smart - Get 20% Off Selected Items + Free Shipping</p>
+							<span>hello@company.com</span>
+						</div>
+					</div>
+					<div class="right__placement">
+						<a href="#" class="outline-btn">Refresh</a>
+						<button type="submit" class="regular-btn bigger">Preview</button>
+					</div>
+				</div>
+				<div class="placement__switcher">
+					<div class="elem__placement active" data-placement="inbox">
+						<div class="placement__icon">
+							<span><img src="img/placement1.svg" alt="placement"></span>
+							<p>Inbox placement</p>
+						</div>
+						<div class="placement__desc">
+							<h6>75<span>%</span></h6>
+							<p><span><img src="img/success.svg" alt="icon"></span> deliverability</p>
+						</div>
+					</div>
+
+					<div class="elem__placement" data-placement="auth">
+						<div class="placement__icon">
+							<span><img src="img/placement2.svg" alt="placement"></span>
+							<p>Authentication</p>
+						</div>
+						<div class="placement__desc">
+							<h6>3</h6>
+							<p><span><img src="img/error.svg" alt="icon"></span> Issues</p>
+						</div>
+					</div>
+
+					<div class="elem__placement" data-placement="spam">
+						<div class="placement__icon">
+							<span><img src="img/placement3.svg" alt="placement"></span>
+							<p>SpamAssassin</p>
+						</div>
+						<div class="placement__desc">
+							<h6>5.2</h6>
+							<p><span><img src="img/warning.svg" alt="icon"></span> spam score</p>
+						</div>
+					</div>
+
+					<div class="elem__placement" data-placement="linksvalidator">
+						<div class="placement__icon">
+							<span><img src="img/placement4.svg" alt="placement"></span>
+							<p>Links validator</p>
+						</div>
+						<div class="placement__desc">
+							<h6>0</h6>
+							<p><span><img src="img/success.svg" alt="icon"></span> broken links</p>
+						</div>
+					</div>
+
+					<div class="elem__placement" data-placement="imagesvalidator">
+						<div class="placement__icon">
+							<span><img src="img/placement5.svg" alt="placement"></span>
+							<p>Images validator</p>
+						</div>
+						<div class="placement__desc">
+							<h6>3</h6>
+							<p><span><img src="img/error.svg" alt="icon"></span> Issues</p>
+						</div>
+					</div>
+
+					<div class="elem__placement" data-placement="blacklist">
+						<div class="placement__icon">
+							<span><img src="img/placement6.svg" alt="placement"></span>
+							<p>Blacklisting</p>
+						</div>
+						<div class="placement__desc">
+							<h6>0</h6>
+							<p><span><img src="img/success.svg" alt="icon"></span> listed</p>
+						</div>
+					</div>
+				</div>
+				<div class="placement__container--wrapper">
+					<div class="element__placement blacklist" style="display:none;">
+						<div class="blacklist__container">
+							<div class="header__">
+								<p><span><img src="img/blacklist.svg" alt="linkvalidtor"></span> Blacklist monitoring</p>
+								<div class="head__right">
+									<p><span><img src="img/warning.svg" alt="error"></span> 2 issues</p>
+								</div>
+							</div>
+							<div class="content__">
+								<div class="blacklist__elem">
+									<div class="blacklist__domain">
+										<p><span><img src="img/error.svg" alt="error"></span>alt1.gmail-smtp-in.l.google.com</p>
+									</div>
+									<div class="blacklist__controls">
+										<a href="#" class="delist">Delist <img src="img/externalred.svg" alt="external"></a>
+									</div>
+								</div>
+
+								<div class="blacklist__elem">
+									<div class="blacklist__domain">
+										<p><span><img src="img/error.svg" alt="error"></span>alt1.gmail-smtp-in.l.google.com</p>
+									</div>
+									<div class="blacklist__controls">
+										<a href="#" class="delist">Delist <img src="img/externalred.svg" alt="external"></a>
+									</div>
+								</div>
+
+								<div class="blacklist__elem">
+									<div class="blacklist__domain">
+										<p><span><img src="img/success.svg" alt="error"></span>alt1.gmail-smtp-in.l.google.com</p>
+									</div>
+									<div class="blacklist__controls">
+										<span class="not__listed">Not listed</span>
+									</div>
+								</div>
+
+								<div class="blacklist__elem">
+									<div class="blacklist__domain">
+										<p><span><img src="img/success.svg" alt="error"></span>alt1.gmail-smtp-in.l.google.com</p>
+									</div>
+									<div class="blacklist__controls">
+										<span class="not__listed">Not listed</span>
+									</div>
+								</div>
+								<div class="blacklist__elem">
+									<div class="blacklist__domain">
+										<p><span><img src="img/success.svg" alt="error"></span>alt1.gmail-smtp-in.l.google.com</p>
+									</div>
+									<div class="blacklist__controls">
+										<span class="not__listed">Not listed</span>
+									</div>
+								</div>
+								<div class="blacklist__elem">
+									<div class="blacklist__domain">
+										<p><span><img src="img/success.svg" alt="error"></span>alt1.gmail-smtp-in.l.google.com</p>
+									</div>
+									<div class="blacklist__controls">
+										<span class="not__listed">Not listed</span>
+									</div>
+								</div>
+								<div class="blacklist__elem">
+									<div class="blacklist__domain">
+										<p><span><img src="img/success.svg" alt="error"></span>alt1.gmail-smtp-in.l.google.com</p>
+									</div>
+									<div class="blacklist__controls">
+										<span class="not__listed">Not listed</span>
+									</div>
+								</div>
+								<div class="blacklist__elem">
+									<div class="blacklist__domain">
+										<p><span><img src="img/success.svg" alt="error"></span>alt1.gmail-smtp-in.l.google.com</p>
+									</div>
+									<div class="blacklist__controls">
+										<span class="not__listed">Not listed</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="element__placement imagesvalidator" style="display:none;">
+						<div class="links__container">
+							<div class="header__">
+								<p><span><img src="img/images.svg" alt="linkvalidtor"></span> Images validator</p>
+								<div class="head__right">
+									<p><span><img src="img/warning.svg" alt="error"></span> 2 issues</p>
+								</div>
+							</div>
+							<div class="content__">
+								<div class="no__problems">
+									<div class="circle" data-size="310" data-thickness="35" data-color="#ECFDF3" data-empty="#ECFDF3" data-value="0.00">
+										<div class="zero__link">
+											<p>All your images <br> are accessible</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+
+
+
+
+
+
+
+
+
+					<div class="element__placement linksvalidator" style="display:none;">
+						<div class="links__container">
+							<div class="header__">
+								<p><span><img src="img/linkvalidator.svg" alt="linkvalidtor"></span>Links validator</p>
+								<div class="head__right">
+									<p><span><img src="img/error.svg" alt="error"></span> 3 broken links</p>
+								</div>
+							</div>
+							<div class="content__">
+								<div class="no__problems">
+									<div class="circle" data-size="310" data-thickness="35" data-color="#ECFDF3" data-empty="#ECFDF3" data-value="0.00">
+										<div class="zero__link">
+											<p>You have</p>
+											<span>0</span>
+											<p>Broken links</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="element__placement spam" style="display:none;">
+						<div class="spam__container">
+							<div class="header__">
+								<p><span><img src="img/trash.svg" alt="trash"></span> SpamAssassin</p>
+								<div class="head__right">
+									<p><span><img src="img/warning.svg" alt="warning"></span> score 5.2</p>
+								</div>
+							</div>
+							<div class="content__">
+								<div class="elem__spam">
+									<div class="head__spam">
+										<div class="left__spam">
+											<p><span><img src="img/error.svg" alt="error"></span> ALL_TRUSTED</p>
+										</div>
+										<div class="right__spam">
+											<span class="red">3.2</span>
+										</div>
+										<a href="#"><img src="img/dropdownbottom.svg" alt="dropdown"></a>
+									</div>
+									<div class="content__spam" style="display:none;">
+										<p>RBL: ADMINISTRATOR NOTICE: The query to zen.spamhaus.org was blocked due to usage of an open resolver. See <span class="break__all">https://www.spamhaus.org/returnc/pub/</span> [209.85.217.44 listed in zen.spamhaus.org</p>
+									</div>
+								</div>
+
+								<div class="elem__spam">
+									<div class="head__spam">
+										<div class="left__spam">
+											<p><span><img src="img/error.svg" alt="error"></span> SUBJ_ALL_CAPS</p>
+										</div>
+										<div class="right__spam">
+											<span class="yellow">0.8</span>
+										</div>
+										<a href="#"><img src="img/dropdownbottom.svg" alt="dropdown"></a>
+									</div>
+									<div class="content__spam" style="display:none;">
+										<p>RBL: ADMINISTRATOR NOTICE: The query to zen.spamhaus.org was blocked due to usage of an open resolver. See <span class="break__all">https://www.spamhaus.org/returnc/pub/</span> [209.85.217.44 listed in zen.spamhaus.org</p>
+									</div>
+								</div>
+
+								<div class="elem__spam">
+									<div class="head__spam">
+										<div class="left__spam">
+											<p><span><img src="img/warning.svg" alt="error"></span> EXCUSE_4</p>
+										</div>
+										<div class="right__spam">
+											<span class="yellow">0.8</span>
+										</div>
+										<a href="#"><img src="img/dropdownbottom.svg" alt="dropdown"></a>
+									</div>
+									<div class="content__spam" style="display:none;">
+										<p>RBL: ADMINISTRATOR NOTICE: The query to zen.spamhaus.org was blocked due to usage of an open resolver. See <span class="break__all">https://www.spamhaus.org/returnc/pub/</span> [209.85.217.44 listed in zen.spamhaus.org</p>
+									</div>
+								</div>
+
+								<div class="elem__spam">
+									<div class="head__spam">
+										<div class="left__spam">
+											<p><span><img src="img/warning.svg" alt="error"></span> GUARANTEED_100_PERCENT</p>
+										</div>
+										<div class="right__spam">
+											<span class="yellow">0.9</span>
+										</div>
+										<a href="#"><img src="img/dropdownbottom.svg" alt="dropdown"></a>
+									</div>
+									<div class="content__spam" style="display:none;">
+										<p>RBL: ADMINISTRATOR NOTICE: The query to zen.spamhaus.org was blocked due to usage of an open resolver. See <span class="break__all">https://www.spamhaus.org/returnc/pub/</span> [209.85.217.44 listed in zen.spamhaus.org</p>
+									</div>
+								</div>
+
+								<div class="elem__spam">
+									<div class="head__spam">
+										<div class="left__spam">
+											<p><span><img src="img/success.svg" alt="error"></span> DKIM_VALID_AU</p>
+										</div>
+										<div class="right__spam">
+											<span class="green">-4.2</span>
+										</div>
+										<a href="#"><img src="img/dropdownbottom.svg" alt="dropdown"></a>
+									</div>
+									<div class="content__spam" style="display:none;">
+										<p>RBL: ADMINISTRATOR NOTICE: The query to zen.spamhaus.org was blocked due to usage of an open resolver. See <span class="break__all">https://www.spamhaus.org/returnc/pub/</span> [209.85.217.44 listed in zen.spamhaus.org</p>
+									</div>
+								</div>
+
+								<div class="elem__spam">
+									<div class="head__spam">
+										<div class="left__spam">
+											<p><span><img src="img/success.svg" alt="error"></span> UPPERCASE_75_100</p>
+										</div>
+										<div class="right__spam">
+											<span class="green">-1.8</span>
+										</div>
+										<a href="#"><img src="img/dropdownbottom.svg" alt="dropdown"></a>
+									</div>
+									<div class="content__spam" style="display:none;">
+										<p>RBL: ADMINISTRATOR NOTICE: The query to zen.spamhaus.org was blocked due to usage of an open resolver. See <span class="break__all">https://www.spamhaus.org/returnc/pub/</span> [209.85.217.44 listed in zen.spamhaus.org</p>
+									</div>
+								</div>
+
+								<div class="elem__spam">
+									<div class="head__spam">
+										<div class="left__spam">
+											<p><span><img src="img/success.svg" alt="error"></span> SUBJ_ALL_CAPS</p>
+										</div>
+										<div class="right__spam">
+											<span class="green">-1.2</span>
+										</div>
+										<a href="#"><img src="img/dropdownbottom.svg" alt="dropdown"></a>
+									</div>
+									<div class="content__spam" style="display:none;">
+										<p>RBL: ADMINISTRATOR NOTICE: The query to zen.spamhaus.org was blocked due to usage of an open resolver. See <span class="break__all">https://www.spamhaus.org/returnc/pub/</span> [209.85.217.44 listed in zen.spamhaus.org</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="element__placement auth" style="display:none;">
+						<div class="auth__container">
+							<div class="header__">
+								<p><span><img src="img/verified.svg" alt="verified"></span> Authentication</p>
+								<div class="counter">
+									<p><span><img src="img/error.svg" alt="error"></span>3 issues</p>
+								</div>
+							</div>
+							<div class="content__">
+								<div class="elem__content">
+									<div class="head__">
+										<div class="head__left">
+											<span><img src="img/error.svg" alt="error"></span>
+											<p>Sender Policy Framework <span>(SPF)</span></p>
+										</div>
+										<div class="head__right">
+											<a href="#"><img src="img/dropdownbottom.svg" alt="dropdownbottom"></a>
+										</div>
+									</div>
+									<div class="content__auth__">
+										<p>v=DKIM1; k=rsa;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq8JxVBMLHZRj1WvIMSHApRY3DraE/EiFiR6IMAlDq9GAnrVy0tDQyBND1G8+1fy5RwssQ9DgfNe7rImwxabWfWxJ1LSmo/DzEdOHOJNQiP/nw7MdmGu+R9hEvBeGRQ Amn1jkO46KIw/</p>
+									</div>
+								</div>
+
+								<div class="elem__content">
+									<div class="head__">
+										<div class="head__left">
+											<span><img src="img/success.svg" alt="error"></span>
+											<p>DomainKeys Identified Mail <span>(DKIM)</span></p>
+										</div>
+										<div class="head__right">
+											<a href="#"><img src="img/dropdownbottom.svg" alt="dropdownbottom"></a>
+										</div>
+									</div>
+									<div class="content__auth__">
+										<p>v=DKIM1; k=rsa;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq8JxVBMLHZRj1WvIMSHApRY3DraE/EiFiR6IMAlDq9GAnrVy0tDQyBND1G8+1fy5RwssQ9DgfNe7rImwxabWfWxJ1LSmo/DzEdOHOJNQiP/nw7MdmGu+R9hEvBeGRQ Amn1jkO46KIw/</p>
+									</div>
+								</div>
+
+								<div class="elem__content">
+									<div class="head__">
+										<div class="head__left">
+											<span><img src="img/error.svg" alt="error"></span>
+											<p>Domain-based Message Authentication <span>(DMARC)</span></p>
+										</div>
+										<div class="head__right">
+											<a href="#"><img src="img/dropdownbottom.svg" alt="dropdownbottom"></a>
+										</div>
+									</div>
+									<div class="content__auth__">
+										<p>v=DKIM1; k=rsa;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq8JxVBMLHZRj1WvIMSHApRY3DraE/EiFiR6IMAlDq9GAnrVy0tDQyBND1G8+1fy5RwssQ9DgfNe7rImwxabWfWxJ1LSmo/DzEdOHOJNQiP/nw7MdmGu+R9hEvBeGRQ Amn1jkO46KIw/</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="element__placement inbox" >
+						<div class="inbox__container">
+							<div class="header__">
+								<p><span><img src="img/inbox.svg" alt="inbox"></span>Inbox placement</p>
+								<div class="percent">
+									<img src="img/success.svg" alt="success">
+									<p><span>75%</span> deliverability</p>
+								</div>
+							</div>
+							<div class="content__">
+								<div class="elem__content">
+									<div class="head__">
+										<a href="#"><img src="img/dropdownbottom.svg" alt="dropdown"></a>
+										<div class="head__left__">
+											<span><img src="img/h1.png" alt="h1"></span>
+											<p>Gmail</p>
+										</div>
+										<div class="header__right">
+											<ul>
+												<li><span class="dot green"></span>75% Inbox</li>
+												<li><span class="dot yellow"></span>15% Spam</li>
+												<li><span class="dot red"></span>10% Undelivrable</li>
+											</ul>
+										</div>
+									</div>
+									<div class="table__wrapper" style="display:none;">
+										<table class="regular-table">
+											<tr>
+												<th class="text-left uppercase">Sent to</th>
+												<th class="text-left uppercase">Landing</th>
+												<th class="text-left uppercase">Server</th>
+												<th class="text-center uppercase">DKIM</th>
+												<th class="text-center uppercase">DMARC</th>
+												<th class="text-center uppercase">SPF</th>
+											</tr>
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot green"></span> Inbox</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot green"></span> Inbox</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot green"></span> Inbox</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot yellow"></span> Spam</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot red"></span> Trash</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot yellow"></span> Spam</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot red"></span> Trash</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+
+
+
+								<div class="elem__content">
+									<div class="head__">
+										<a href="#"><img src="img/dropdownbottom.svg" alt="dropdown"></a>
+										<div class="head__left__">
+											<span><img src="img/h2.png" alt="h1"></span>
+											<p>Outlook</p>
+										</div>
+										<div class="header__right">
+											<ul>
+												<li><span class="dot green"></span>75% Inbox</li>
+												<li><span class="dot yellow"></span>15% Spam</li>
+												<li><span class="dot red"></span>10% Undelivrable</li>
+											</ul>
+										</div>
+									</div>
+									<div class="table__wrapper" style="display:none;">
+										<table class="regular-table">
+											<tr>
+												<th class="text-left uppercase">Sent to</th>
+												<th class="text-left uppercase">Landing</th>
+												<th class="text-left uppercase">Server</th>
+												<th class="text-center uppercase">DKIM</th>
+												<th class="text-center uppercase">DMARC</th>
+												<th class="text-center uppercase">SPF</th>
+											</tr>
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot green"></span> Inbox</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot green"></span> Inbox</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot green"></span> Inbox</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot yellow"></span> Spam</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot red"></span> Trash</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot yellow"></span> Spam</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot red"></span> Trash</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+
+
+
+								<div class="elem__content">
+									<div class="head__">
+										<a href="#"><img src="img/dropdownbottom.svg" alt="dropdown"></a>
+										<div class="head__left__">
+											<span><img src="img/h3.png" alt="h1"></span>
+											<p>iCloud</p>
+										</div>
+										<div class="header__right">
+											<ul>
+												<li><span class="dot green"></span>75% Inbox</li>
+												<li><span class="dot yellow"></span>15% Spam</li>
+												<li><span class="dot red"></span>10% Undelivrable</li>
+											</ul>
+										</div>
+									</div>
+									<div class="table__wrapper" style="display:none;">
+										<table class="regular-table">
+											<tr>
+												<th class="text-left uppercase">Sent to</th>
+												<th class="text-left uppercase">Landing</th>
+												<th class="text-left uppercase">Server</th>
+												<th class="text-center uppercase">DKIM</th>
+												<th class="text-center uppercase">DMARC</th>
+												<th class="text-center uppercase">SPF</th>
+											</tr>
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot green"></span> Inbox</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot green"></span> Inbox</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot green"></span> Inbox</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot yellow"></span> Spam</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot red"></span> Trash</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot yellow"></span> Spam</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot red"></span> Trash</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+
+
+
+
+								<div class="elem__content">
+									<div class="head__">
+										<a href="#"><img src="img/dropdownbottom.svg" alt="dropdown"></a>
+										<div class="head__left__">
+											<span><img src="img/h4.png" alt="h1"></span>
+											<p>Yahoo</p>
+										</div>
+										<div class="header__right">
+											<ul>
+												<li><span class="dot green"></span>75% Inbox</li>
+												<li><span class="dot yellow"></span>15% Spam</li>
+												<li><span class="dot red"></span>10% Undelivrable</li>
+											</ul>
+										</div>
+									</div>
+									<div class="table__wrapper" style="display:none;">
+										<table class="regular-table">
+											<tr>
+												<th class="text-left uppercase">Sent to</th>
+												<th class="text-left uppercase">Landing</th>
+												<th class="text-left uppercase">Server</th>
+												<th class="text-center uppercase">DKIM</th>
+												<th class="text-center uppercase">DMARC</th>
+												<th class="text-center uppercase">SPF</th>
+											</tr>
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot green"></span> Inbox</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot green"></span> Inbox</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot green"></span> Inbox</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot yellow"></span> Spam</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot red"></span> Trash</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot yellow"></span> Spam</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot red"></span> Trash</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+
+
+
+								<div class="elem__content">
+									<div class="head__">
+										<a href="#"><img src="img/dropdownbottom.svg" alt="dropdown"></a>
+										<div class="head__left__">
+											<span><img src="img/h5.png" alt="h1"></span>
+											<p>AoI</p>
+										</div>
+										<div class="header__right">
+											<ul>
+												<li><span class="dot green"></span>75% Inbox</li>
+												<li><span class="dot yellow"></span>15% Spam</li>
+												<li><span class="dot red"></span>10% Undelivrable</li>
+											</ul>
+										</div>
+									</div>
+									<div class="table__wrapper" style="display:none;">
+										<table class="regular-table">
+											<tr>
+												<th class="text-left uppercase">Sent to</th>
+												<th class="text-left uppercase">Landing</th>
+												<th class="text-left uppercase">Server</th>
+												<th class="text-center uppercase">DKIM</th>
+												<th class="text-center uppercase">DMARC</th>
+												<th class="text-center uppercase">SPF</th>
+											</tr>
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot green"></span> Inbox</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot green"></span> Inbox</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot green"></span> Inbox</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot yellow"></span> Spam</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot red"></span> Trash</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot yellow"></span> Spam</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot red"></span> Trash</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+
+
+
+								<div class="elem__content">
+									<div class="head__">
+										<a href="#"><img src="img/dropdownbottom.svg" alt="dropdown"></a>
+										<div class="head__left__">
+											<span><img src="img/h6.png" alt="h1"></span>
+											<p>Yandex</p>
+										</div>
+										<div class="header__right">
+											<ul>
+												<li><span class="dot green"></span>75% Inbox</li>
+												<li><span class="dot yellow"></span>15% Spam</li>
+												<li><span class="dot red"></span>10% Undelivrable</li>
+											</ul>
+										</div>
+									</div>
+									<div class="table__wrapper" style="display:none;">
+										<table class="regular-table">
+											<tr>
+												<th class="text-left uppercase">Sent to</th>
+												<th class="text-left uppercase">Landing</th>
+												<th class="text-left uppercase">Server</th>
+												<th class="text-center uppercase">DKIM</th>
+												<th class="text-center uppercase">DMARC</th>
+												<th class="text-center uppercase">SPF</th>
+											</tr>
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot green"></span> Inbox</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot green"></span> Inbox</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot green"></span> Inbox</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot yellow"></span> Spam</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot red"></span> Trash</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot yellow"></span> Spam</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="text-left">
+													<p >ricardo.cooper@example.com</p>
+												</td>
+												<td class="text-left">
+													<p class="with__dot medium"><span class="dot red"></span> Trash</p>
+												</td>
+												<td class="text-left">
+													<p class="server">sas8-c59fbf4fb9f5.qloud-c.gmail.xyz</p>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/error.svg" alt="success"></span>
+												</td>
+												<td class="text-center">
+													<span class="status"><img src="img/success.svg" alt="success"></span>
+												</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal__wrapper" style="display:none;">
+		<div class="inner__modal">
+			<div class="modal__box new__report">
+				<div class="loading" style="display:none;">
+					<div class="inner__loading">
+						<span><img src="img/loading.svg" alt="loading"></span>
+						<p>Just a moment <br> <span>Waiting the arrival of your email..</span></p>
+					</div>
+				</div>
+				<form action="">
+					<div class="head__report">
+						<p>New report</p>
+						<span>Add the following email seed as participants to your email</span>
+					</div>
+					<div class="tags__wrapper">
+						<a href="#" data-copy="some text bla bla bla bla">
+							<span><img src="img/copycircle.svg" alt="copycircle"></span>
+							<p>Click to copy</p>
+						</a>
+						<div class="elem__tag">
+							<p>alma.lawson@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>tanya.hill@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>g@email.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>dolores.chambers@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>tim@gmail.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>jennings@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>sara.cruz@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>tim.jennings@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>bro@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>dolores.chambers@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>tim@gmail.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>jennings@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>sara.cruz@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>tim.jennings@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>yesm@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>yesm@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>tim.jennings@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>yesm@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>yesm@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>tim.jennings@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>yesm@example.com</p>
+						</div>
+						<div class="elem__tag">
+							<p>yesm@example.com</p>
+						</div>
+					</div>
+					<div class="controls__reports">
+						<div class="left__report">
+							<a href="#">Watch tutorial</a>
+						</div>
+						<div class="right__reports">
+							<a href="#" class="outline-btn cancel__modal">Cancel</a>
+							<button type="submit" class="regular-btn">Check results</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script
+  src="https://code.jquery.com/jquery-3.6.4.js"
+  integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+  crossorigin="anonymous"></script>
+  	<script src="js/circle-progress.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
