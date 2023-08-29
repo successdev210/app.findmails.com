@@ -40,6 +40,12 @@ Route::middleware(('auth'))->group(function () {
     Route::get('/bulktasks', function () {
         return view('pages.bulktasks', ['pageTitle' => 'bulktasks']);
     })->name('bulktasks');
+    Route::get('/domainsearch', function () {
+        return view('pages.domainsearch', ['pageTitle' => 'bulktasks']);
+    })->name('domainsearch');
+    Route::get('/bulkfinder2', function () {
+        return view('pages.bulkfinder2', ['pageTitle' => 'bulktasks']);
+    })->name('bulkfinder2');
     Route::get('/leads', function () {
         return view('pages.leads', ['pageTitle' => 'leads']);
     })->name('leads');

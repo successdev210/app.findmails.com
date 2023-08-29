@@ -1090,7 +1090,7 @@ header .container {
 }
 
 .box__verification {
-  max-width: 550px;
+  max-width: 650px;
   margin-left: auto;
   margin-right: auto;
   background: #FFFFFF;
@@ -1331,11 +1331,6 @@ header .container {
 }
 .box__verification .search__field .finder__input > input {
   position: relative;
-}
-.box__verification .search__field .finder__input > input:focus {
-  z-index: 2;
-}
-.box__verification .search__field .finder__input > input:nth-child(1) {
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
   margin-right: -1px;
@@ -1343,7 +1338,14 @@ header .container {
   max-width: 200px;
   padding-right: 15px;
 }
+.box__verification .search__field .finder__input > input:focus {
+  z-index: 2;
+}
 .box__verification .search__field .finder__input > input:nth-child(2) {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.box__verification .search__field .finder__input > input:last-child {
   width: 100%;
   max-width: 300px;
   border-top-left-radius: 0px;
@@ -1384,7 +1386,7 @@ header .container {
       -ms-flex-align: center;
           align-items: center;
 }
-.box__verification .search__field .group__input > input {
+.box__verification .search__field .group__input > input:last-child {
   padding-right: 110px;
 }
 .box__verification .search__field .group__input > button {

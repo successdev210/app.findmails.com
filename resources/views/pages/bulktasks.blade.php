@@ -15,7 +15,7 @@
             <div class="bulk">
                 <ul>
                     <li>
-                        <a href="domainsearch.html">
+                        <a href="{{url('domainsearch')}}">
                             <div class="media__image">
                                 <img src="img/deliv1.svg" alt="deliv1">
                             </div>
@@ -26,7 +26,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="bulkfinder2.html">
+                        <a href="{{url('bulkfinder2')}}">
                             <div class="media__image">
                                 <img src="img/deliv3.svg" alt="deliv1">
                             </div>
@@ -37,7 +37,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="bulkverif2.html">
+                        <a href="{{url('bulkverif2')}}">
                             <div class="media__image shadow">
                                 <img src="img/deliv4.svg" alt="deliv1">
                             </div>
