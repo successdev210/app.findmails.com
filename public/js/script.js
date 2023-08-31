@@ -1,5 +1,34 @@
 $(document).ready(function(){
 
+	let totalItem = 0;
+	let page = 1;
+	let totalPage = 1;
+	let pageSize = 5;
+	let file = null;
+	let originalCsv = "";
+	let modifiedCsv = "";
+	let columnFields = [];
+	let includeHeader = false;
+	const setPage = () => {
+		$('.pagination p').text('Page ' + page + ' of ' + totalPage);
+		if(page > 1){
+			$('.prev-btn').removeClass('disabled');
+		}else{
+			$('.prev-btn').addClass('disabled');
+		}
+		$('.finder__list__result .elem__finder').css('display', 'none');
+		for(let i = 0; i < 5; i++){
+			$('.finder__list__result .elem__finder:nth-child(' + (i + 1 + (page - 1) * pageSize) + ')' ).css('display', 'block');
+			console.log($('.finder__list__result .elem__finder:nth-child(' + (i + 1 + (page - 1) * pageSize) + ')' ));
+		}
+		if(page === totalPage){
+			$('.next-btn').addClass('disabled');			
+		}else{
+			$('.next-btn').removeClass('disabled');
+		}
+	}
+	const controlHtml = '<div class="controls__"><a href="#" class="tooltip__float copy__button--email" data-tooltip="Copy"			data-copy="SOME COPIED TEXT"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.00955 4.08331H7.48785C7.79534 4.0833 8.06064 4.0833 8.27913 4.10115C8.50975 4.11999 8.73913 4.16159 8.95985 4.27405C9.28913 4.44183 9.55685 4.70955 9.72463 5.03883C9.83709 5.25955 9.87869 5.48893 9.89753 5.71955C9.91538 5.93804 9.91538 6.20331 9.91537 6.51081V10.9891C9.91538 11.2966 9.91538 11.5619 9.89753 11.7804C9.87869 12.011 9.83709 12.2404 9.72463 12.4611C9.55685 12.7904 9.28913 13.0581 8.95985 13.2259C8.73913 13.3384 8.50975 13.38 8.27913 13.3988C8.06064 13.4167 7.79539 13.4167 7.48791 13.4166H3.00956C2.70208 13.4167 2.43675 13.4167 2.21826 13.3988C1.98765 13.38 1.75827 13.3384 1.53755 13.2259C1.20826 13.0581 0.940547 12.7904 0.772769 12.4611C0.660306 12.2404 0.618705 12.011 0.599863 11.7804C0.582011 11.5619 0.582021 11.2966 0.582032 10.9891V6.51084C0.582021 6.20333 0.582011 5.93805 0.599863 5.71955C0.618705 5.48893 0.660306 5.25955 0.772769 5.03883C0.940547 4.70955 1.20826 4.44183 1.53755 4.27405C1.75827 4.16159 1.98765 4.11999 2.21826 4.10115C2.43676 4.0833 2.70205 4.0833 3.00955 4.08331Z" fill="#D1D1D6" /><path					d="M10.9879 0.583313H6.50955C6.20206 0.583304 5.93676 0.583295 5.71827 0.601147C5.48765 0.619989 5.25827 0.66159 5.03755 0.774053C4.70827 0.941832 4.44055 1.20955 4.27277 1.53883C4.16031 1.75955 4.11871 1.98893 4.09987 2.21955C4.08386 2.41542 4.08221 2.64889 4.08205 2.91666L7.51254 2.91665C7.79758 2.91659 8.10663 2.91651 8.37413 2.93837C8.6769 2.96311 9.0769 3.02433 9.4895 3.23456C10.0383 3.51419 10.4845 3.96038 10.7641 4.50919C10.9744 4.92179 11.0356 5.32179 11.0603 5.62456C11.0822 5.89207 11.0821 6.20112 11.082 6.48617L11.082 9.91663C11.3498 9.91647 11.5833 9.91482 11.7791 9.89882C12.0098 9.87997 12.2391 9.83837 12.4599 9.72591C12.7891 9.55813 13.0569 9.29042 13.2246 8.96113C13.3371 8.74041 13.3787 8.51103 13.3975 8.28042C13.4154 8.06193 13.4154 7.79667 13.4154 7.48919V3.01084C13.4154 2.70336 13.4154 2.43803 13.3975 2.21955C13.3787 1.98893 13.3371 1.75955 13.2246 1.53883C13.0569 1.20955 12.7891 0.941832 12.4599 0.774053C12.2391 0.66159 12.0098 0.619989 11.7791 0.601147C11.5606 0.583295 11.2953 0.583304 10.9879 0.583313Z"	fill="#D1D1D6" /></svg>	</a> <a href="#" class="tooltip__float" data-tooltip="Add to Leads"><svg width="16" height="16"	viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">	<path d="M13.3341 9.99998C13.3341 9.63179 13.0357 9.33331 12.6675 9.33331C12.2993 9.33331 12.0008 9.63179 12.0008 9.99998V11.3333H10.6675C10.2993 11.3333 10.0008 11.6318 10.0008 12C10.0008 12.3682 10.2993 12.6666 10.6675 12.6666H12.0008V14C12.0008 14.3682 12.2993 14.6666 12.6675 14.6666C13.0357 14.6666 13.3341 14.3682 13.3341 14V12.6666H14.6675C15.0357 12.6666 15.3341 12.3682 15.3341 12C15.3341 11.6318 15.0357 11.3333 14.6675 11.3333H13.3341V9.99998Z"	fill="#D1D1D6" /><path fill-rule="evenodd" clip-rule="evenodd"	d="M8.12147 9.44231C8.30964 9.53818 8.46262 9.69116 8.55849 9.87932C8.66054 10.0796 8.66757 10.2984 8.66749 10.5179C8.66749 10.5231 8.66748 10.5282 8.66748 10.5333C8.66748 11.5162 8.66713 12.4991 8.66749 13.4821C8.66752 13.5615 8.66755 13.6563 8.66073 13.7399C8.65282 13.8367 8.63252 13.9753 8.55849 14.1206C8.46262 14.3088 8.30964 14.4618 8.12147 14.5577C7.97618 14.6317 7.83752 14.652 7.74071 14.6599C7.65716 14.6667 7.56232 14.6667 7.48291 14.6667C5.60595 14.666 3.72899 14.666 1.85202 14.6667C1.77252 14.6667 1.67747 14.6667 1.59372 14.6598C1.49657 14.6519 1.35763 14.6314 1.21211 14.557C1.02371 14.4607 0.870331 14.3066 0.774872 14.1178C0.701338 13.9723 0.681396 13.8337 0.673817 13.7364C0.667305 13.6527 0.667775 13.5579 0.668167 13.4789C0.671604 12.7861 0.650949 12.0435 0.92122 11.391C1.25953 10.5743 1.90845 9.92536 2.72521 9.58705C3.06501 9.4463 3.42386 9.38792 3.82969 9.36023C4.22436 9.3333 4.7093 9.33331 5.31047 9.33331C6.03462 9.33331 6.75877 9.33358 7.48291 9.33331C7.70242 9.33322 7.9212 9.34026 8.12147 9.44231Z"	fill="#D1D1D6" /><path fill-rule="evenodd" clip-rule="evenodd"	d="M9.71619 1.94368C9.85434 1.60239 10.243 1.43771 10.5843 1.57586C11.8047 2.06985 12.6675 3.26669 12.6675 4.66665C12.6675 6.0666 11.8047 7.26344 10.5843 7.75743C10.243 7.89558 9.85434 7.73091 9.71619 7.38962C9.57804 7.04833 9.74272 6.65967 10.084 6.52152C10.8182 6.22432 11.3342 5.50494 11.3342 4.66665C11.3342 3.82835 10.8182 3.10897 10.084 2.81178C9.74272 2.67363 9.57804 2.28496 9.71619 1.94368Z"				fill="#D1D1D6" /><path fill-rule="evenodd" clip-rule="evenodd"				d="M3.00082 4.66665C3.00082 2.8257 4.4932 1.33331 6.33415 1.33331C8.1751 1.33331 9.66748 2.8257 9.66748 4.66665C9.66748 6.5076 8.1751 7.99998 6.33415 7.99998C4.4932 7.99998 3.00082 6.5076 3.00082 4.66665Z" fill="#D1D1D6" />	</svg>	</a></div>';
+
 	$('.new__bulk--verif--box .head__verif>a').on('click' ,function(e){
 		e.preventDefault();
 		$(this).closest(".float__box").fadeOut(300);
@@ -679,6 +708,7 @@ $(document).ready(function(){
 
 	$('.new__bulkfinder--button').on("click" ,function(e){
 		e.preventDefault();
+		setNewBulk();
 
 		$('.bulk__domain--file').css("display" , "none");
 		$('.new__bulk--finder').fadeIn(300);
@@ -700,6 +730,14 @@ $(document).ready(function(){
 			$('body,html').css("overflow-y" ,"hidden");
 		}
 	});
+	function setNewBulk(){
+		file = null;
+		originalCsv = "";
+		modifiedCsv = "";
+		columnFields = [];
+		$('.step__one .include__header--checkbox input').prop("checked", false);
+		includeHeader = false;
+	} 
 
 	$(".step__one .next__step>a").on("click" ,function(e){
 		e.preventDefault();
@@ -711,7 +749,21 @@ $(document).ready(function(){
 		$('.step__one .next__step').css("display" , 'none');
 		$('.step__two').removeClass("inactive");
 		$('.step__two .upload__head>p').text("Map fields (2/3)");
-		$('.map__fields').fadeIn(300);
+		$('.map__fields').fadeIn(300);	
+		$('.map__fields>.dropdown__container').css("display",'block');	
+		if(includeHeader == true){
+			columnFields = originalCsv.split("\r\n")[0].split(",");
+		}
+		$('.map__').each(function(index,elem){
+			if(includeHeader === true){				
+				$(elem).siblings("p").text(columnFields[index]);
+			}else{
+				$(elem).siblings("p").text((index == 0 ? "First" : index == 1 ? "Second" : "Third") + " Column");		
+			}
+			$(elem).find("div ul li:first-child a").trigger("click");
+		});
+		swapColumnsInCsv(0, 1, 2);
+		setMap();
 	});
 
 	$('.step__two .next__step>a').on("click" ,function(e){
@@ -722,6 +774,45 @@ $(document).ready(function(){
 		$('.step__three').removeClass("inactive");
 		$('.step__three .content__progress').fadeIn(300);
 		$('.step__three').addClass("filled");
+		if(!$('.progress__button a').hasClass('disabled')){
+			$('.progress__button a').addClass('disabled');
+		}
+		$('.step__three .progress .active').css('width', '0%');
+		$(".progress__steps p:first-child").text("Searching for emails...");
+		$(".search__progress p:first-child").text("Search in progress...");
+
+
+		var formData = new FormData();
+		formData.append('file', new Blob([modifiedCsv], { type: 'text/csv' }), file.name);
+
+		$.ajax({
+		url: 'http://167.235.254.95:8888/bulk_email/',
+		type: 'POST',
+		headers: {
+			'accept': 'application/json',
+		},
+		data: formData,
+		processData: false,
+		contentType: false,
+		success: function(data) {
+			const lines = data.split("\r\n");
+			let emails = [];
+			for(let i = 0; i < lines.length - 1; i++){
+				const items = lines[i].split(",");
+				emails.push(items[items.length - 1]);
+			}
+			console.log(emails);
+			$('.step__three .progress .active').css('width', '100%');
+			if($('.progress__button a').hasClass('disabled')){
+				$('.progress__button a').removeClass('disabled');
+			}
+			$(".progress__steps p:first-child").text(emails.length + " emails found");
+			$(".search__progress p:first-child").text("Search completed");			
+		},
+		error: function(xhr, status, error) {
+			console.error('API error:', error);
+		}
+		});
 	});
 
 	function bulkDroppableHeight(){
@@ -744,12 +835,16 @@ $(document).ready(function(){
 	}
 	$('.step__one .include__header--checkbox input').on("change" ,function(e){
 		if ($(this).prop("checked") == true) {
+			includeHeader = true;
+			
 			$('.float__box.new__bulk--finder .upload__box .container__upload > .upload__main .upload__step .upload__content .files__grid > .elem__file > .file__desc .header').css("display" ,"block");
 			bulkDroppableHeight();
 		} else {
+			includeHeader = false;
 			$('.float__box.new__bulk--finder .upload__box .container__upload > .upload__main .upload__step .upload__content .files__grid > .elem__file > .file__desc .header').css("display" ,"none");
 			bulkDroppableHeight();
 		}
+		console.log(includeHeader);
 	});
 	$('.new__bulk--finder .droppable__box p a').on("click" ,function(e){
 		e.preventDefault();
@@ -777,40 +872,8 @@ $(document).ready(function(){
 	      if (dataTransfer && dataTransfer.files.length) {
 	        e.preventDefault();
 	        e.stopPropagation();
-	        $.each(dataTransfer.files, function(i, file) {
-	          var reader = new FileReader();
-	          reader.onload = $.proxy(function(file, $fileList, event) {
-	          			$('.files__grid>.elem__file').remove();
-						let newElement = "<div class='elem__file'> \
-									<span><img src='img/fileuploadicon.svg' alt='fileicon'></span>\
-									<div class='file__desc'>\
-										<div class='top__part'>\
-											<div class='lf__desc'>\
-												<p>"+ file.name +"</p>\
-												<span>"+ (file.size/100).toFixed(0) +" KB</span>\
-											</div>\
-											<div class='rg__desc'>\
-												<a href='#'><img src='img/trashfile.svg' alt='trashfile'></a>\
-											</div>\
-										</div>\
-										<div class='header' style='display:"+ checkHeader +";'>\
-											<span>Header included</span>\
-										</div>\
-										<div class='bottom__part'>\
-											<div class='progress'>\
-												<div class='active' style='width:100%;'></div>\
-											</div>\
-											<span>100%</span>\
-										</div>\
-									</div>\
-								</div>"
-					$('.files__grid').append(newElement);
-					$('.upload__submit').removeClass("disabled");		
-	           		$('.step__one .next__step').fadeIn(300);
-	           		bulkDroppableHeight();
-	          }, this, file, $("#fileList"));
-	          reader.readAsDataURL(file);
-	        });
+	        file = dataTransfer.files[0];
+			uploadCsv(checkHeader);
 	      }
 	    }
 	  });
@@ -827,47 +890,71 @@ $(document).ready(function(){
 				checkHeader = "none";
 			}
 		$('.droppable__area').removeClass("active__droppable");
-	      var dataTransfer = e.originalEvent.target;
-	      if (dataTransfer && dataTransfer.files.length) {
-	        e.preventDefault();
-	        e.stopPropagation();
-	        $.each(dataTransfer.files, function(i, file) {
-	          var reader = new FileReader();
-	          reader.onload = $.proxy(function(file, $fileList, event) {
-      			$('.files__grid>.elem__file').remove();
-	            let newElement = "<div class='elem__file'> \
-									<span><img src='img/fileuploadicon.svg' alt='fileicon'></span>\
-									<div class='file__desc'>\
-										<div class='top__part'>\
-											<div class='lf__desc'>\
-												<p>"+ file.name +"</p>\
-												<span>"+ (file.size/100).toFixed(0) +" KB</span>\
-											</div>\
-											<div class='rg__desc'>\
-												<a href='#'><img src='img/trashfile.svg' alt='trashfile'></a>\
-											</div>\
+	    var dataTransfer = e.originalEvent.target;
+
+		
+		// $.ajax({
+		// 	url: 'http://167.235.254.95:8888/bulk_domain/',
+		// 	type: 'POST',
+		// 	headers: {
+		// 		'accept': 'application/json',
+		// 	},
+		// 	data: formData,
+		// 	processData: false,
+		// 	contentType: false,
+		// 	success: function(data) {
+		// 		console.log(data); // Process the response data
+		// 	},
+		// 	error: function(xhr, status, error) {
+		// 		console.error('API error:', error);
+		// 	}
+		// 	});
+
+		if (dataTransfer && dataTransfer.files.length) {
+			e.preventDefault();
+			e.stopPropagation();
+
+			file = dataTransfer.files[0];
+			uploadCsv(checkHeader);
+		}
+	});
+	function uploadCsv(checkHeader){
+		var reader = new FileReader();
+			
+		reader.onload = $.proxy(function(file, $fileList, event) {		
+			originalCsv = event.target.result;
+			modifiedCsv = event.target.result;
+			$('.files__grid>.elem__file').remove();
+			let newElement = "<div class='elem__file'> \
+								<span><img src='img/fileuploadicon.svg' alt='fileicon'></span>\
+								<div class='file__desc'>\
+									<div class='top__part'>\
+										<div class='lf__desc'>\
+											<p>"+ file.name +"</p>\
+											<span>"+ (file.size/100).toFixed(0) +" KB</span>\
 										</div>\
-										<div class='header' style='display:"+ checkHeader +";'>\
-											<span>Header included</span>\
-										</div>\
-										<div class='bottom__part'>\
-											<div class='progress'>\
-												<div class='active' style='width:100%;'></div>\
-											</div>\
-											<span>100%</span>\
+										<div class='rg__desc'>\
+											<a href='#'><img src='img/trashfile.svg' alt='trashfile'></a>\
 										</div>\
 									</div>\
-								</div>"
-					$('.files__grid').append(newElement);
-					$('.upload__submit').removeClass("disabled");		
-					$('.step__one .next__step').fadeIn(300);
-					bulkDroppableHeight();
-	          }, this, file, $("#fileList"));
-	          reader.readAsDataURL(file);
-	        });
-	      }
-	});
-
+									<div class='header' style='display:"+ checkHeader +";'>\
+										<span>Header included</span>\
+									</div>\
+									<div class='bottom__part'>\
+										<div class='progress'>\
+											<div class='active' style='width:100%;'></div>\
+										</div>\
+										<span>100%</span>\
+									</div>\
+								</div>\
+							</div>"
+			$('.files__grid').append(newElement);
+			$('.upload__submit').removeClass("disabled");		
+			$('.step__one .next__step').fadeIn(300);
+			bulkDroppableHeight();
+			}, this, file, $("#fileList"));
+			reader.readAsText(file);
+	}
 
 
 
@@ -1536,9 +1623,9 @@ $(document).ready(function(){
 			$(this).closest(".group__dropdown").find(".dropdown__box").fadeOut(300);
 		}
 		if ($(this).closest(".group__dropdown").hasClass('default__dropdown')) {
-				if ($(this).closest(".group__dropdown").hasClass("map__")) {
-					$(this).closest(".group__dropdown").attr("data-old" , $(this).closest('.group__dropdown').find(">a").attr("data-row"));
-				}
+			if ($(this).closest(".group__dropdown").hasClass("map__")) {
+				$(this).closest(".group__dropdown").attr("data-old" , $(this).closest('.group__dropdown').find(">a").attr("data-row"));
+			}
 			$(this).closest('.group__dropdown').find(">a").addClass("picked");
 			$(this).closest('.group__dropdown').find(">a>p").text($(this).text());
 			$(this).closest(".group__dropdown").find(">a").removeClass("opened");	
@@ -1560,60 +1647,89 @@ $(document).ready(function(){
 				});
 				$('.map__picked').removeClass('map__picked');
 				$('.group__dropdown').attr("data-old" , "");
-				let socialArray = [];
-				$('.map__').each(function(index,elem){
-					let currentText;
-					let valueText;
-					if ($(elem).find(">a>p>span").length) {
-						currentText = $(elem).find(">a>p>span").text();
-					} else{
-						currentText = $(elem).find(">a>p").text();
-					}
-
-					if (currentText == "First name") {
-						valueText = "Alex";
-					}
-					if (currentText == "Last name") {
-						valueText = "Jackson";
-					}
-					if (currentText == "Company name") {
-						valueText = "Apple";
-					}
-
-					socialArray.push({
-						title:currentText,
-						value:valueText
-					});
-				});
-				let currentList = $(this).closest(".group__dropdown");
-				$('.preview__box table').remove();
-				let newTable = "<table>\
-								 		<tr>\
-								 			<th>"+ socialArray[0].title +"</th>\
-								 			<th>"+ socialArray[1].title +"</th>\
-								 			<th>"+ socialArray[2].title +"</th>\
-								 		</tr>\
-								 		<tr>\
-								 			<td>"+ socialArray[0].value +"</td>\
-								 			<td>"+ socialArray[1].value +"</td>\
-								 			<td>"+ socialArray[2].value +"</td>\
-								 		</tr>\
-								 		<tr>\
-								 			<td>"+ socialArray[0].value +"</td>\
-								 			<td>"+ socialArray[1].value +"</td>\
-								 			<td>"+ socialArray[2].value +"</td>\
-								 		</tr>\
-								 		<tr>\
-								 			<td>"+ socialArray[0].value +"</td>\
-								 			<td>"+ socialArray[1].value +"</td>\
-								 			<td>"+ socialArray[2].value +"</td>\
-								 		</tr>\
-								 	</table>";
-
-				$('.preview__box').append(newTable);		 
+				setMap();	 
 			}
 		}
 	});
+	function setMap(){
+		let socialArray = [];
+		let columnArray = [];
+		$('.map__').each(function(index,elem){
+			// $(elem).closest("p").text(columnFields[index]);
+			let currentText;
+			let valueText;
+			if ($(elem).find(">a>p>span").length) {
+				currentText = $(elem).find(">a>p>span").text();
+			} else{
+				currentText = $(elem).find(">a>p").text();
+			}
+			if (currentText == "First name") {
+				valueText = "Alex";
+			}
+			if (currentText == "Last name") {
+				valueText = "Jackson";
+			}
+			if (currentText == "Company name") {
+				valueText = "Apple";
+			}
+
+			socialArray.push({
+				title:currentText,
+				value:valueText
+			});
+			columnArray.push(currentText);
+		});
+		swapColumnsInCsv(columnArray.indexOf("First name"), columnArray.indexOf("Last name"), columnArray.indexOf("Company name"));
+
+		let bulk_emails = [];
+		var lines = modifiedCsv.split('\r\n');
+		for(let i = 0; i < lines.length - 1; i++){
+			bulk_emails.push(lines[i].split(","));
+		}
+		let currentList = $(this).closest(".group__dropdown");
+		$('.preview__box table').remove();
+		let newTable = "<table>\
+							<tr>\
+								<th>"+ (includeHeader? bulk_emails[0][0] : "First name") +"</th>\
+								<th>"+ (includeHeader? bulk_emails[0][1] : "Last name") +"</th>\
+								<th>"+ (includeHeader? bulk_emails[0][2] : "Company name") +"</th>\
+							</tr>";
+		bulk_emails.forEach(( email, index ) => {
+			if(includeHeader){
+				if(index > 0){
+					newTable += "<tr>\
+									<td>"+ email[0] +"</td>\
+									<td>"+ email[1] +"</td>\
+									<td>"+ email[2] +"</td>\
+								</tr>";
+				}				
+			}else{
+				newTable += "<tr>\
+								<td>"+ email[0] +"</td>\
+								<td>"+ email[1] +"</td>\
+								<td>"+ email[2] +"</td>\
+							</tr>";
+			}
+		
+			
+		});
+		newTable += "</table>";
+		$('.preview__box').append(newTable);	
+	}
+	function swapColumnsInCsv(columnIndex0, columnIndex1, columnIndex2) {
+		var lines = originalCsv.split('\r\n');
+		for (var i = 0; i < lines.length - 1; i++) {
+		  var cells = lines[i].split(',');
+		  var cell0 = cells[0]
+		  var cell1 = cells[1]
+		  var cell2 = cells[2]
+		  cells[columnIndex0] = cell0;
+		  cells[columnIndex1] = cell1;
+		  cells[columnIndex2] = cell2;
+		  lines[i] = cells.join(',');
+		}
+		modifiedCsv = lines.join('\r\n');
+	  }
 
 	$(document).click(function(event) { 
 	  var $target = $(event.target);
@@ -1663,11 +1779,13 @@ $(document).ready(function(){
 	$('.finder__search').on("submit" ,function(e){
 		e.preventDefault();
 		let errors = 0;
+		page = 1;
+		totalPage = 1;
 		let currentForm = $(this);
 		const firstName = $(currentForm).find(".first-name").val().toLowerCase();
 		const lastName = $(currentForm).find(".last-name").val().toLowerCase();
 		const domainName = $(currentForm).find(".company").val().toLowerCase();
-		const controlHtml = '<div class="controls__"><a href="#" class="tooltip__float copy__button--email" data-tooltip="Copy"			data-copy="SOME COPIED TEXT"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.00955 4.08331H7.48785C7.79534 4.0833 8.06064 4.0833 8.27913 4.10115C8.50975 4.11999 8.73913 4.16159 8.95985 4.27405C9.28913 4.44183 9.55685 4.70955 9.72463 5.03883C9.83709 5.25955 9.87869 5.48893 9.89753 5.71955C9.91538 5.93804 9.91538 6.20331 9.91537 6.51081V10.9891C9.91538 11.2966 9.91538 11.5619 9.89753 11.7804C9.87869 12.011 9.83709 12.2404 9.72463 12.4611C9.55685 12.7904 9.28913 13.0581 8.95985 13.2259C8.73913 13.3384 8.50975 13.38 8.27913 13.3988C8.06064 13.4167 7.79539 13.4167 7.48791 13.4166H3.00956C2.70208 13.4167 2.43675 13.4167 2.21826 13.3988C1.98765 13.38 1.75827 13.3384 1.53755 13.2259C1.20826 13.0581 0.940547 12.7904 0.772769 12.4611C0.660306 12.2404 0.618705 12.011 0.599863 11.7804C0.582011 11.5619 0.582021 11.2966 0.582032 10.9891V6.51084C0.582021 6.20333 0.582011 5.93805 0.599863 5.71955C0.618705 5.48893 0.660306 5.25955 0.772769 5.03883C0.940547 4.70955 1.20826 4.44183 1.53755 4.27405C1.75827 4.16159 1.98765 4.11999 2.21826 4.10115C2.43676 4.0833 2.70205 4.0833 3.00955 4.08331Z" fill="#D1D1D6" /><path					d="M10.9879 0.583313H6.50955C6.20206 0.583304 5.93676 0.583295 5.71827 0.601147C5.48765 0.619989 5.25827 0.66159 5.03755 0.774053C4.70827 0.941832 4.44055 1.20955 4.27277 1.53883C4.16031 1.75955 4.11871 1.98893 4.09987 2.21955C4.08386 2.41542 4.08221 2.64889 4.08205 2.91666L7.51254 2.91665C7.79758 2.91659 8.10663 2.91651 8.37413 2.93837C8.6769 2.96311 9.0769 3.02433 9.4895 3.23456C10.0383 3.51419 10.4845 3.96038 10.7641 4.50919C10.9744 4.92179 11.0356 5.32179 11.0603 5.62456C11.0822 5.89207 11.0821 6.20112 11.082 6.48617L11.082 9.91663C11.3498 9.91647 11.5833 9.91482 11.7791 9.89882C12.0098 9.87997 12.2391 9.83837 12.4599 9.72591C12.7891 9.55813 13.0569 9.29042 13.2246 8.96113C13.3371 8.74041 13.3787 8.51103 13.3975 8.28042C13.4154 8.06193 13.4154 7.79667 13.4154 7.48919V3.01084C13.4154 2.70336 13.4154 2.43803 13.3975 2.21955C13.3787 1.98893 13.3371 1.75955 13.2246 1.53883C13.0569 1.20955 12.7891 0.941832 12.4599 0.774053C12.2391 0.66159 12.0098 0.619989 11.7791 0.601147C11.5606 0.583295 11.2953 0.583304 10.9879 0.583313Z"	fill="#D1D1D6" /></svg>	</a> <a href="#" class="tooltip__float" data-tooltip="Add to Leads"><svg width="16" height="16"	viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">	<path d="M13.3341 9.99998C13.3341 9.63179 13.0357 9.33331 12.6675 9.33331C12.2993 9.33331 12.0008 9.63179 12.0008 9.99998V11.3333H10.6675C10.2993 11.3333 10.0008 11.6318 10.0008 12C10.0008 12.3682 10.2993 12.6666 10.6675 12.6666H12.0008V14C12.0008 14.3682 12.2993 14.6666 12.6675 14.6666C13.0357 14.6666 13.3341 14.3682 13.3341 14V12.6666H14.6675C15.0357 12.6666 15.3341 12.3682 15.3341 12C15.3341 11.6318 15.0357 11.3333 14.6675 11.3333H13.3341V9.99998Z"	fill="#D1D1D6" /><path fill-rule="evenodd" clip-rule="evenodd"	d="M8.12147 9.44231C8.30964 9.53818 8.46262 9.69116 8.55849 9.87932C8.66054 10.0796 8.66757 10.2984 8.66749 10.5179C8.66749 10.5231 8.66748 10.5282 8.66748 10.5333C8.66748 11.5162 8.66713 12.4991 8.66749 13.4821C8.66752 13.5615 8.66755 13.6563 8.66073 13.7399C8.65282 13.8367 8.63252 13.9753 8.55849 14.1206C8.46262 14.3088 8.30964 14.4618 8.12147 14.5577C7.97618 14.6317 7.83752 14.652 7.74071 14.6599C7.65716 14.6667 7.56232 14.6667 7.48291 14.6667C5.60595 14.666 3.72899 14.666 1.85202 14.6667C1.77252 14.6667 1.67747 14.6667 1.59372 14.6598C1.49657 14.6519 1.35763 14.6314 1.21211 14.557C1.02371 14.4607 0.870331 14.3066 0.774872 14.1178C0.701338 13.9723 0.681396 13.8337 0.673817 13.7364C0.667305 13.6527 0.667775 13.5579 0.668167 13.4789C0.671604 12.7861 0.650949 12.0435 0.92122 11.391C1.25953 10.5743 1.90845 9.92536 2.72521 9.58705C3.06501 9.4463 3.42386 9.38792 3.82969 9.36023C4.22436 9.3333 4.7093 9.33331 5.31047 9.33331C6.03462 9.33331 6.75877 9.33358 7.48291 9.33331C7.70242 9.33322 7.9212 9.34026 8.12147 9.44231Z"	fill="#D1D1D6" /><path fill-rule="evenodd" clip-rule="evenodd"	d="M9.71619 1.94368C9.85434 1.60239 10.243 1.43771 10.5843 1.57586C11.8047 2.06985 12.6675 3.26669 12.6675 4.66665C12.6675 6.0666 11.8047 7.26344 10.5843 7.75743C10.243 7.89558 9.85434 7.73091 9.71619 7.38962C9.57804 7.04833 9.74272 6.65967 10.084 6.52152C10.8182 6.22432 11.3342 5.50494 11.3342 4.66665C11.3342 3.82835 10.8182 3.10897 10.084 2.81178C9.74272 2.67363 9.57804 2.28496 9.71619 1.94368Z"				fill="#D1D1D6" /><path fill-rule="evenodd" clip-rule="evenodd"				d="M3.00082 4.66665C3.00082 2.8257 4.4932 1.33331 6.33415 1.33331C8.1751 1.33331 9.66748 2.8257 9.66748 4.66665C9.66748 6.5076 8.1751 7.99998 6.33415 7.99998C4.4932 7.99998 3.00082 6.5076 3.00082 4.66665Z" fill="#D1D1D6" />	</svg>	</a></div>';
+		
 		$(this).find(".finder__input>input").each(function(index,elem){
 			if ($(elem).val().length == 0) {
 				errors++;
@@ -1689,15 +1807,16 @@ $(document).ready(function(){
 					domain_name: domainName
 				},
 				success: function (result, status, xhr) {
+					totalItem = result.output.length;
+					totalPage = Math.ceil(totalItem / pageSize);
+					console.log(totalItem, totalPage);
 					$('.searching').css("display" , "none");
 					$('.company__elem').css("display" ,'block');
 					// $('.company__elem .finder__list').append(
 					// 	"<p>aaaaaaaaaaa <p>"
 					// );
 					$('.company__elem .finder__list').html("");
-					$('.company__elem .finder__list').append(
-						"<p>" +  result.output.length + " " + (result.output.length === 1 ? "email" : "emails") + " found<p>"
-					);
+					$('.company__elem').find('p').text(result.output.length + " " + (result.output.length === 1 ? "email" : "emails") + " found");
 
 					if(result.output.length > 0){
 						result.output.forEach((context, index)=>{
@@ -1705,9 +1824,9 @@ $(document).ready(function(){
 							$('.company__elem .finder__list').append(
 								'<div class="elem__finder">	<p><span class="tooltip__float" data-tooltip="Email verified."><img src="img/success.svg"			alt="success"></span>' + context.email + '</p>' + controlHtml
 							);
-						});			
-						
-					}					
+						});						
+					}
+					setPage();					
 				},
 				error: function (xhr, status, error) {
 					$('.searching').css("display" , "none");
@@ -1747,6 +1866,8 @@ $(document).ready(function(){
 	$('.domain__verification').on("submit" ,function(e){
 		e.preventDefault();
 		let errors = 0;
+		page = 1;
+		totalPage = 1;
 		let currentForm = $(this);
 		let domainField = $(".domain__field").val();
 		var domainPattern = /^(https?:\/\/)?((?:[a-z0-9-]+\.)+(?:com|net|org))(?:\/|$)/i
@@ -1758,55 +1879,72 @@ $(document).ready(function(){
 			$('.searching').fadeIn(300);
 			$('.domain__result').css("display" ,'none');
 
+			$('.domain__result--head').find('p').text(domainField);
+			$('.domain__result--head').find('img').attr('src', 'img/' + domainField.slice(0, domainField.length - 4) + '.svg');
+			$('.domain__result--head').find('img').attr('alt', domainField.slice(0, domainField.length - 4));
 
 			$.ajax({
 				type: "get",
-				url: 'http://167.235.254.95:8765/domainsearch/',
+				url: 'http://167.235.254.95:8765/domain/',
 				data: {					
-					domain_name: domainName
+					domain: domainField
 				},
 				success: function (result, status, xhr) {
+					totalItem = result.output.length;
+					totalPage = Math.ceil(totalItem / pageSize);				
 					$('.searching').css("display" , "none");
 					$('.domain__result').css("display" ,'block');
-					
+					$('.domain__result--head .result__desc--').find('span').text(result.output.length + (result.output.length === 1 ? " email" : " emails"));
 					$('.company__elem .finder__list').html("");
-					$('.company__elem .finder__list').append(
-						"<p>" +  result.output.length + " " + (result.output.length === 1 ? "email" : "emails") + " found<p>"
-					);
-
 					if(result.output.length > 0){
 						result.output.forEach((context, index)=>{
-							console.log(context.email);
 							$('.company__elem .finder__list').append(
-								'<div class="elem__finder">	<p><span class="tooltip__float" data-tooltip="Email verified."><img src="img/success.svg"			alt="success"></span>' + context.email + '</p>' + controlHtml
-							);
+								'<div class="elem__finder" style="display: none">	<p><span class="tooltip__float" data-tooltip="Email verified."><img src="img/success.svg"			alt="success"></span>' + context.email + '</p>' + controlHtml
+							);											
 						});			
 						
 					}					
+					setPage();				
 				},
 				error: function (xhr, status, error) {
-					$('.searching').css("display" , "none");
-					$('.company__elem').css("display" ,'block');
-					$('.company__elem .finder__list').html(
-						"<p>Not found <p>"
-					);
+					// $('.searching').css("display" , "none");
+					// $('.company__elem').css("display" ,'block');
+					// $('.company__elem .finder__list').html(
+					// 	"<p>Not found <p>"
+					// );
+					console.log(xhr.status);
 				}
 			});
 
+			// setTimeout(function(){
+			// 	$('.searching').css("display" , "none");
+			// 	$('.domain__result').css("display" ,'block');
+			// 	// if ($(currentForm).find(".domain__field").val().toLowerCase() == "paypal.com") {
+			// 	// 	$(".domain__result[data-domain='"+ $(currentForm).find(".domain__field").val() +"']").fadeIn(300)
+			// 	// }
+			// 	// if ($(currentForm).find(".email__field").val().toLowerCase() == "test1@gmail.com") {
+			// 	// 	$(".email__result[data-email='"+ $(currentForm).find(".email__field").val() +"']").fadeIn(300)
+			// 	// }
+			// 	// if ($(currentForm).find(".email__field").val().toLowerCase() == "test2@gmail.com") {
+			// 	// 	$(".email__result[data-email='"+ $(currentForm).find(".email__field").val() +"']").fadeIn(300)
+			// 	// }
+			// }, 2000);
+		}
+	});
 
-			setTimeout(function(){
-				$('.searching').css("display" , "none");
-				$('.domain__result').css("display" ,'none');
-				if ($(currentForm).find(".domain__field").val().toLowerCase() == "paypal.com") {
-					$(".domain__result[data-domain='"+ $(currentForm).find(".domain__field").val() +"']").fadeIn(300)
-				}
-				// if ($(currentForm).find(".email__field").val().toLowerCase() == "test1@gmail.com") {
-				// 	$(".email__result[data-email='"+ $(currentForm).find(".email__field").val() +"']").fadeIn(300)
-				// }
-				// if ($(currentForm).find(".email__field").val().toLowerCase() == "test2@gmail.com") {
-				// 	$(".email__result[data-email='"+ $(currentForm).find(".email__field").val() +"']").fadeIn(300)
-				// }
-			}, 2000);
+	$('.next-btn').on('click', function(e){
+		e.preventDefault();
+		if(page < totalPage){
+			page++;	
+			setPage();		
+		}
+		
+	});
+	$('.prev-btn').on('click', function(e){
+		e.preventDefault();
+		if(page > 1){
+			page--;
+			setPage();
 		}
 	});
 

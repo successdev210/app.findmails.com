@@ -1339,7 +1339,7 @@ header .container {
   padding-right: 15px;
 }
 .box__verification .search__field .finder__input > input:focus {
-  z-index: 2;
+    z-index: 2;
 }
 .box__verification .search__field .finder__input > input:nth-child(2) {
   border-top-left-radius: 0px;
@@ -5803,7 +5803,7 @@ input:checked + .slider:before {
   padding-left: 24px;
   padding-top: 16px;
   padding-bottom: 16px;
-  border-top: 1px solid #E4E4E7;
+  /* border-top: 1px solid #E4E4E7; */
 }
 .pagination .controls__wrapper {
   display: -webkit-box;
