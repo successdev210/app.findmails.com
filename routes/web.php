@@ -31,9 +31,7 @@ Route::middleware(('auth'))->group(function () {
     Route::get('/findersearch', function () {
         return view('pages.findersearch', ['pageTitle' => 'findersearch']);
     })->name('findersearch');
-    Route::get('/singleemail', function () {
-        return view('pages.singleemail', ['pageTitle' => 'singleemail']);
-    })->name('singleemail');
+
     Route::get('/bulkverif2', function () {
         return view('pages.bulkverif2', ['pageTitle' => 'bulkverif2']);
     })->name('bulkverif2');
@@ -46,6 +44,7 @@ Route::middleware(('auth'))->group(function () {
     Route::get('/bulkfinder2', function () {
         return view('pages.bulkfinder2', ['pageTitle' => 'bulktasks']);
     })->name('bulkfinder2');
+
     Route::get('/leads', function () {
         return view('pages.leads', ['pageTitle' => 'leads']);
     })->name('leads');
@@ -55,6 +54,9 @@ Route::middleware(('auth'))->group(function () {
     Route::get('/settings', function () {
         return view('pages.settings', ['pageTitle' => 'settings']);
     })->name('settings');
+    Route::get('/singleemail', function () {
+        return view('pages.singleemail', ['pageTitle' => 'singleemail']);
+    })->name('singleemail');
 });
 Route::get('/test', function () {
     return view('pages.test', ['pageTitle' => 'test']);

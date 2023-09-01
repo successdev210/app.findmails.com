@@ -801,13 +801,13 @@ $(document).ready(function(){
 				const items = lines[i].split(",");
 				emails.push(items[items.length - 1]);
 			}
-			console.log(emails);
 			$('.step__three .progress .active').css('width', '100%');
 			if($('.progress__button a').hasClass('disabled')){
 				$('.progress__button a').removeClass('disabled');
 			}
 			$(".progress__steps p:first-child").text(emails.length + " emails found");
-			$(".search__progress p:first-child").text("Search completed");			
+			$(".search__progress p:first-child").text("Search completed");	
+					
 		},
 		error: function(xhr, status, error) {
 			console.error('API error:', error);
